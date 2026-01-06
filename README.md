@@ -395,4 +395,8 @@ Cannot resolve symbol 'Entity'
 ✅ 自走できるエンジニアになれる  
 
 **がんばってください！40日後には立派なJava Webエンジニアです！🎉**
+<<<<<<< HEAD
 Main branch
+=======
+Feature branch
+>>>>>>> feature/readme
