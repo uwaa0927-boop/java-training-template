@@ -1,0 +1,347 @@
+{
+	"info": {
+		"_postman_id": "e9c84259-cf26-4b95-9d91-1f65b78f8bf7",
+		"name": "Weather App Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "51303001",
+		"_collection_link": "https://uwaa0927-5787051.postman.co/workspace/uwaa0927's-Workspace~136dd9ad-a7d5-4704-8945-ef6270e4cd55/collection/51303001-e9c84259-cf26-4b95-9d91-1f65b78f8bf7?action=share&source=collection_link&creator=51303001"
+	},
+	"item": [
+		{
+			"name": "東京_現在の天気",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.open-meteo.com/v1/forecast?latitude=35.6895&longitude=139.6917&timezone=Asia/Tokyo&current=temperature_2m,weathercode,windspeed_10m,relativehumidity_2m",
+					"protocol": "https",
+					"host": [
+						"api",
+						"open-meteo",
+						"com"
+					],
+					"path": [
+						"v1",
+						"forecast"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "35.6895"
+						},
+						{
+							"key": "longitude",
+							"value": "139.6917"
+						},
+						{
+							"key": "timezone",
+							"value": "Asia/Tokyo"
+						},
+						{
+							"key": "current",
+							"value": "temperature_2m,weathercode,windspeed_10m,relativehumidity_2m"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "東京_週刊天気予報",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.open-meteo.com/v1/forecast?latitude=35.6895&longitude=139.6917&daily=temperature_2m_max,temperature_2m_min,weathercode,precipitation_sum&timezone=Asia/Tokyo&forecast_days=7",
+					"protocol": "https",
+					"host": [
+						"api",
+						"open-meteo",
+						"com"
+					],
+					"path": [
+						"v1",
+						"forecast"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "35.6895"
+						},
+						{
+							"key": "longitude",
+							"value": "139.6917"
+						},
+						{
+							"key": "daily",
+							"value": "temperature_2m_max,temperature_2m_min,weathercode,precipitation_sum"
+						},
+						{
+							"key": "timezone",
+							"value": "Asia/Tokyo"
+						},
+						{
+							"key": "forecast_days",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "北海道_現在の天気",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.open-meteo.com/v1/forecast?latitude=43.064&longitude=141.347&current=temperature_2m,weathercode,windspeed_10m,relativehumidity_2m&timezone=Asia/Tokyo",
+					"protocol": "https",
+					"host": [
+						"api",
+						"open-meteo",
+						"com"
+					],
+					"path": [
+						"v1",
+						"forecast"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "43.064"
+						},
+						{
+							"key": "longitude",
+							"value": "141.347"
+						},
+						{
+							"key": "current",
+							"value": "temperature_2m,weathercode,windspeed_10m,relativehumidity_2m"
+						},
+						{
+							"key": "timezone",
+							"value": "Asia/Tokyo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "大阪_現在の天気",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.open-meteo.com/v1/forecast?latitude=34.686&longitude=135.520&current=temperature_2m,weathercode,windspeed_10m,relativehumidity_2m&timezone=Asia/Tokyo",
+					"protocol": "https",
+					"host": [
+						"api",
+						"open-meteo",
+						"com"
+					],
+					"path": [
+						"v1",
+						"forecast"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "34.686"
+						},
+						{
+							"key": "longitude",
+							"value": "135.520"
+						},
+						{
+							"key": "current",
+							"value": "temperature_2m,weathercode,windspeed_10m,relativehumidity_2m"
+						},
+						{
+							"key": "timezone",
+							"value": "Asia/Tokyo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "福岡_現在の天気",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.open-meteo.com/v1/forecast?latitude=33.590&longitude=130.402&current=temperature_2m,weathercode,windspeed_10m,relativehumidity_2m&timezone=Asia/Tokyo",
+					"protocol": "https",
+					"host": [
+						"api",
+						"open-meteo",
+						"com"
+					],
+					"path": [
+						"v1",
+						"forecast"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "33.590"
+						},
+						{
+							"key": "longitude",
+							"value": "130.402"
+						},
+						{
+							"key": "current",
+							"value": "temperature_2m,weathercode,windspeed_10m,relativehumidity_2m"
+						},
+						{
+							"key": "timezone",
+							"value": "Asia/Tokyo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "沖縄_現在の天気",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.open-meteo.com/v1/forecast?latitude=26.212&longitude=127.681&current=temperature_2m,weathercode,windspeed_10m,relativehumidity_2m&timezone=Asia/Tokyo",
+					"protocol": "https",
+					"host": [
+						"api",
+						"open-meteo",
+						"com"
+					],
+					"path": [
+						"v1",
+						"forecast"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "26.212"
+						},
+						{
+							"key": "longitude",
+							"value": "127.681"
+						},
+						{
+							"key": "current",
+							"value": "temperature_2m,weathercode,windspeed_10m,relativehumidity_2m"
+						},
+						{
+							"key": "timezone",
+							"value": "Asia/Tokyo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "エラー_緯度が範囲外",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.open-meteo.com/v1/forecast?latitude=200&longitude=139.6917&current=temperature_2m,weathercode,windspeed_10m,relativehumidity_2m&timezone=Asia/Tokyo",
+					"protocol": "https",
+					"host": [
+						"api",
+						"open-meteo",
+						"com"
+					],
+					"path": [
+						"v1",
+						"forecast"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "200"
+						},
+						{
+							"key": "longitude",
+							"value": "139.6917"
+						},
+						{
+							"key": "current",
+							"value": "temperature_2m,weathercode,windspeed_10m,relativehumidity_2m"
+						},
+						{
+							"key": "timezone",
+							"value": "Asia/Tokyo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "エラー_必須パラメータなし",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.open-meteo.com/v1/forecast?longitude=139.6917&current=temperature_2m,weathercode,windspeed_10m,relativehumidity_2m&timezone=Asia/Tokyo",
+					"protocol": "https",
+					"host": [
+						"api",
+						"open-meteo",
+						"com"
+					],
+					"path": [
+						"v1",
+						"forecast"
+					],
+					"query": [
+						{
+							"key": "longitude",
+							"value": "139.6917"
+						},
+						{
+							"key": "current",
+							"value": "temperature_2m,weathercode,windspeed_10m,relativehumidity_2m"
+						},
+						{
+							"key": "timezone",
+							"value": "Asia/Tokyo"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
