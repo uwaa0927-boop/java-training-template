@@ -1,0 +1,106 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" version="29.3.2">
+  <diagram name="ページ1" id="eqBNXMhKWr4U5CS5mbd6">
+    <mxGraphModel dx="692" dy="714" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="okOv6t8SxZ0cWsb9AwHh-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;" value="ヘッダー&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="590" x="20" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="okOv6t8SxZ0cWsb9AwHh-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="全国天気予報　　　　　　　　　　　　　2026/01/19" vertex="1">
+          <mxGeometry height="30" width="360" x="160" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="okOv6t8SxZ0cWsb9AwHh-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="540" width="590" x="20" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="okOv6t8SxZ0cWsb9AwHh-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="【北海道・東北】" vertex="1">
+          <mxGeometry height="30" width="150" x="40" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="okOv6t8SxZ0cWsb9AwHh-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="47都道府県の天気を見る" vertex="1">
+          <mxGeometry height="30" width="170" x="230" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="okOv6t8SxZ0cWsb9AwHh-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="北海道" vertex="1">
+          <mxGeometry height="40" width="80" x="70" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="okOv6t8SxZ0cWsb9AwHh-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="青森県" vertex="1">
+          <mxGeometry height="40" width="80" x="150" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="okOv6t8SxZ0cWsb9AwHh-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="岩手県" vertex="1">
+          <mxGeometry height="40" width="80" x="230" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="okOv6t8SxZ0cWsb9AwHh-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="宮城&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;県&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="80" x="310" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="okOv6t8SxZ0cWsb9AwHh-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;秋田県&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="80" x="70" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="okOv6t8SxZ0cWsb9AwHh-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;山形県&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="80" x="150" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="okOv6t8SxZ0cWsb9AwHh-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;福島県&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="80" x="230" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="okOv6t8SxZ0cWsb9AwHh-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="【関東】" vertex="1">
+          <mxGeometry height="30" width="150" x="20" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="okOv6t8SxZ0cWsb9AwHh-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="茨城県" vertex="1">
+          <mxGeometry height="40" width="80" x="70" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="okOv6t8SxZ0cWsb9AwHh-17" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="栃木県" vertex="1">
+          <mxGeometry height="40" width="80" x="150" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="okOv6t8SxZ0cWsb9AwHh-18" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="群馬県" vertex="1">
+          <mxGeometry height="40" width="80" x="230" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="okOv6t8SxZ0cWsb9AwHh-19" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="埼玉県" vertex="1">
+          <mxGeometry height="40" width="80" x="310" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="okOv6t8SxZ0cWsb9AwHh-20" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="千葉県" vertex="1">
+          <mxGeometry height="40" width="80" x="70" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="okOv6t8SxZ0cWsb9AwHh-22" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="東京都" vertex="1">
+          <mxGeometry height="40" width="80" x="150" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="okOv6t8SxZ0cWsb9AwHh-23" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="神奈川県" vertex="1">
+          <mxGeometry height="40" width="80" x="230" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="okOv6t8SxZ0cWsb9AwHh-24" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="【中部&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;】&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="150" x="20" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="okOv6t8SxZ0cWsb9AwHh-26" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="・・・" vertex="1">
+          <mxGeometry height="40" width="80" x="70" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="okOv6t8SxZ0cWsb9AwHh-27" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="40" width="80" x="150" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="okOv6t8SxZ0cWsb9AwHh-28" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="40" width="80" x="230" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="okOv6t8SxZ0cWsb9AwHh-29" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="40" width="80" x="310" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="okOv6t8SxZ0cWsb9AwHh-30" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="（以下、中国、四国、九州、沖縄）" vertex="1">
+          <mxGeometry height="30" width="250" x="50" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="okOv6t8SxZ0cWsb9AwHh-32" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="60" width="590" x="20" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="okOv6t8SxZ0cWsb9AwHh-33" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="フッター&lt;div&gt;&lt;span style=&quot;color: rgb(10, 10, 10); font-family: Arial, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);&quot;&gt;©　&lt;/span&gt;&lt;span style=&quot;background-color: rgba(0, 0, 0, 0); font-family: &amp;quot;Monaspace Neon&amp;quot;, ui-monospace, SFMono-Regular, &amp;quot;SF Mono&amp;quot;, Menlo, Consolas, &amp;quot;Liberation Mono&amp;quot;, monospace; font-size: 11.9px; color: rgb(31, 35, 40);&quot;&gt;2024 Weather App | Data by Open-Meteo&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="480" x="40" y="745" as="geometry" />
+        </mxCell>
+        <mxCell id="okOv6t8SxZ0cWsb9AwHh-34" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;h2&gt;トップページの構成：&lt;/h2&gt;" vertex="1">
+          <mxGeometry height="30" width="200" x="20" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="okOv6t8SxZ0cWsb9AwHh-35" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;h2&gt;カードの詳細：&lt;/h2&gt;" vertex="1">
+          <mxGeometry height="30" width="200" x="20" y="850" as="geometry" />
+        </mxCell>
+        <mxCell id="okOv6t8SxZ0cWsb9AwHh-36" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="" vertex="1">
+          <mxGeometry height="80" width="160" x="20" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="okOv6t8SxZ0cWsb9AwHh-38" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;span style=&quot;&quot;&gt;東京都&lt;/span&gt;&lt;div style=&quot;&quot;&gt;🌤️&lt;/div&gt;&lt;div style=&quot;&quot;&gt;→ 詳細を見る&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="90" x="40" y="895" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

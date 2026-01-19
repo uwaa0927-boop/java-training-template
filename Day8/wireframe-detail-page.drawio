@@ -1,0 +1,205 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" version="29.3.2">
+  <diagram name="ページ1" id="DxJkNRyQOTPHuqnFDqet">
+    <mxGraphModel dx="692" dy="714" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;h2&gt;詳細ページの構成：&lt;/h2&gt;" vertex="1">
+          <mxGeometry height="30" width="200" x="20" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="60" width="640" x="20" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="ヘッダー&lt;div&gt;全国天気予報　　　　　　　　　　　← トップへ戻る&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="320" x="40" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="60" width="640" x="20" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="東京都の天気&lt;div&gt;更新日時：　2026 / 01 / 19　13 : 00&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="300" x="40" y="185" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="現在の天気" vertex="1">
+          <mxGeometry height="30" width="90" x="295" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-19" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="☀️　晴れ&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;6.9 ℃&lt;/div&gt;&lt;div&gt;体感温度：4.2℃&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="110" x="285" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-20" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="風速&lt;div&gt;2.5 m/s&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="80" x="220" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-21" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="湿度&lt;br&gt;&lt;div&gt;54 %&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="80" x="300" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-22" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="降水量&lt;br&gt;&lt;div&gt;0.0 mm&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="80" x="380" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-24" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="380" y="260" as="sourcePoint" />
+            <mxPoint x="660" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-25" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="20" y="260" as="sourcePoint" />
+            <mxPoint x="300" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-26" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="20" y="260" as="sourcePoint" />
+            <mxPoint x="20" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-27" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="661" y="260" as="sourcePoint" />
+            <mxPoint x="661" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-30" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="20" y="500" as="sourcePoint" />
+            <mxPoint x="660" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-31" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="週間天気予報" vertex="1">
+          <mxGeometry height="30" width="80" x="300" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-32" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="01 / 19" vertex="1">
+          <mxGeometry height="40" width="60" x="130" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-33" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="01 / 20" vertex="1">
+          <mxGeometry height="40" width="60" x="190" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-34" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="01 / 21" vertex="1">
+          <mxGeometry height="40" width="60" x="250" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-35" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="01 / 22" vertex="1">
+          <mxGeometry height="40" width="60" x="310" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-36" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="01 / 23" vertex="1">
+          <mxGeometry height="40" width="60" x="370" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-39" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="01 / 24" vertex="1">
+          <mxGeometry height="40" width="60" x="430" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-40" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="01 / 25" vertex="1">
+          <mxGeometry height="40" width="60" x="490" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-41" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="☁️" vertex="1">
+          <mxGeometry height="40" width="60" x="130" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-42" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="☁️" vertex="1">
+          <mxGeometry height="40" width="60" x="370" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-43" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="🌤️" vertex="1">
+          <mxGeometry height="40" width="60" x="430" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-44" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="☁️" vertex="1">
+          <mxGeometry height="40" width="60" x="490" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-45" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="☁️" vertex="1">
+          <mxGeometry height="40" width="60" x="310" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-46" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="🌤️" vertex="1">
+          <mxGeometry height="40" width="60" x="250" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-47" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="☁️" vertex="1">
+          <mxGeometry height="40" width="60" x="190" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-48" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="7 ℃&lt;div&gt;-1 ℃&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="60" x="490" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-49" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="40" width="60" x="430" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-50" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="7 ℃&lt;div&gt;-1 ℃&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="60" x="370" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-51" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="6 ℃&lt;div&gt;-1 ℃&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="60" x="310" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-52" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="5 ℃&lt;div&gt;-1 ℃&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="60" x="250" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-53" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="7 ℃&lt;div&gt;1 ℃&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="60" x="190" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-54" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="11 ℃&lt;div&gt;2 ℃&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="60" x="130" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-56" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="0 mm" vertex="1">
+          <mxGeometry height="40" width="60" x="130" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-57" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="0 mm" vertex="1">
+          <mxGeometry height="40" width="60" x="190" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-58" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="0 mm" vertex="1">
+          <mxGeometry height="40" width="60" x="250" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-59" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="0 mm" vertex="1">
+          <mxGeometry height="40" width="60" x="310" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-60" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="0 mm" vertex="1">
+          <mxGeometry height="40" width="60" x="370" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-61" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="9 ℃&lt;div&gt;1 ℃&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="60" x="430" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-62" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="0 mm" vertex="1">
+          <mxGeometry height="40" width="60" x="490" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-64" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="0 mm" vertex="1">
+          <mxGeometry height="40" width="60" x="430" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-65" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="385" y="544.5" as="sourcePoint" />
+            <mxPoint x="660" y="545" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-66" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="20" y="544.5" as="sourcePoint" />
+            <mxPoint x="295" y="545" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-67" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="20" y="750" as="sourcePoint" />
+            <mxPoint x="20" y="545" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-70" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="660" y="545" as="sourcePoint" />
+            <mxPoint x="660" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-71" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="20" y="750" as="sourcePoint" />
+            <mxPoint x="660" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-72" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="60" width="640" x="20" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-73" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="フッター" vertex="1">
+          <mxGeometry height="30" width="60" x="40" y="795" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-74" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;h2&gt;ローディング状態：&lt;/h2&gt;" vertex="1">
+          <mxGeometry height="30" width="200" x="20" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-75" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="100" width="640" x="20" y="920" as="geometry" />
+        </mxCell>
+        <mxCell id="LwiuDRlVu97dTZzRY_b_-76" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="天気情報を取得中 . . .&lt;div&gt;⏳&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="210" x="235" y="955" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
