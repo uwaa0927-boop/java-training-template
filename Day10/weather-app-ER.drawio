@@ -1,0 +1,52 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" version="29.3.3">
+  <diagram name="ページ1" id="qcvKA9Ak7Ns7hbSxsrIV">
+    <mxGraphModel dx="692" dy="714" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="hx42s04unQXH2fTvoBlA-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="190" width="150" x="50" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="hx42s04unQXH2fTvoBlA-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;h2&gt;ER図：&lt;/h2&gt;" vertex="1">
+          <mxGeometry height="30" width="130" x="10" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="hx42s04unQXH2fTvoBlA-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="prefectures" vertex="1">
+          <mxGeometry height="30" width="80" x="85" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="hx42s04unQXH2fTvoBlA-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="weather_records" vertex="1">
+          <mxGeometry height="30" width="100" x="305" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="hx42s04unQXH2fTvoBlA-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="daily_forecasts" vertex="1">
+          <mxGeometry height="30" width="100" x="535" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="hx42s04unQXH2fTvoBlA-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="190" width="150" x="280" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="hx42s04unQXH2fTvoBlA-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="190" width="150" x="510" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="hx42s04unQXH2fTvoBlA-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="id（PK）&lt;div&gt;weather_record_id&lt;/div&gt;&lt;div&gt;forecast_date&lt;/div&gt;&lt;div&gt;temperature_max&lt;/div&gt;&lt;div&gt;temperature_min&lt;/div&gt;&lt;div&gt;weather_code&lt;/div&gt;&lt;div&gt;precipitation_sum&lt;/div&gt;&lt;div&gt;wind_speed_max&lt;/div&gt;&lt;div&gt;sunrise&lt;/div&gt;&lt;div&gt;sunset&lt;/div&gt;&lt;div&gt;created_at&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="120" x="520" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="hx42s04unQXH2fTvoBlA-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="id（PK）&lt;div&gt;name&lt;/div&gt;&lt;div&gt;name_en&lt;/div&gt;&lt;div&gt;latitude&lt;/div&gt;&lt;div&gt;longitude&lt;/div&gt;&lt;div&gt;region&lt;/div&gt;&lt;div&gt;created_at&lt;/div&gt;&lt;div&gt;updated_at&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="100" x="60" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="hx42s04unQXH2fTvoBlA-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="id（PK）&lt;div&gt;prefecture_id&lt;/div&gt;&lt;div&gt;fetched_at&lt;/div&gt;&lt;div&gt;temperature&lt;/div&gt;&lt;div&gt;weather_code&lt;/div&gt;&lt;div&gt;wind_speed&lt;/div&gt;&lt;div&gt;humidity&lt;/div&gt;&lt;div&gt;apparent_temperature&lt;/div&gt;&lt;div&gt;precipitation&lt;/div&gt;&lt;div&gt;cloud_cover&lt;/div&gt;&lt;div&gt;created_at&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="100" x="290" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="hx42s04unQXH2fTvoBlA-12" edge="1" parent="1" source="hx42s04unQXH2fTvoBlA-1" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="hx42s04unQXH2fTvoBlA-6" value="">
+          <mxGeometry height="100" relative="1" width="100" as="geometry">
+            <mxPoint x="270" y="370" as="sourcePoint" />
+            <mxPoint x="370" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hx42s04unQXH2fTvoBlA-13" edge="1" parent="1" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" value="">
+          <mxGeometry height="100" relative="1" width="100" as="geometry">
+            <mxPoint x="430" y="220" as="sourcePoint" />
+            <mxPoint x="510" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
