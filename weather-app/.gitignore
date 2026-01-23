@@ -38,3 +38,6 @@ out/
 
 ### Application Properties ###
 application-local.properties
+
+### .DS_Storeをaddしない ###
+.DS_Store
