@@ -1,0 +1,196 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" version="29.3.4">
+  <diagram name="ページ1" id="hIheS8TGGfhG_PdtIJKP">
+    <mxGraphModel dx="1153" dy="1190" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="fDeVig6A2zsPSU2knbdz-60" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;glass=0;" value="ブラウザ" vertex="1">
+          <mxGeometry height="630" width="100" x="200" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-61" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;glass=0;" value="HomeController" vertex="1">
+          <mxGeometry height="630" width="100" x="380" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-93" parent="fDeVig6A2zsPSU2knbdz-61" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="390" width="10" x="45" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-66" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;glass=0;" value="PrefectureService" vertex="1">
+          <mxGeometry height="630" width="100" x="570" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-90" parent="fDeVig6A2zsPSU2knbdz-66" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="260" width="10" x="45" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-67" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;glass=0;" value="Database" vertex="1">
+          <mxGeometry height="630" width="100" x="1040" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-88" parent="fDeVig6A2zsPSU2knbdz-67" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="50" width="10" x="45" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-68" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;glass=0;" value="Prefecture&lt;div&gt;&lt;div&gt;Repository&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="630" width="100" x="770" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-89" parent="fDeVig6A2zsPSU2knbdz-68" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="130" width="10" x="45" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-69" parent="1" style="html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" value="ブラウザ" vertex="1">
+          <mxGeometry height="40" width="100" x="200" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-70" parent="1" style="html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" value="HomeController" vertex="1">
+          <mxGeometry height="40" width="100" x="380" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-71" parent="1" style="html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" value="PrefectureService" vertex="1">
+          <mxGeometry height="40" width="100" x="570" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-72" parent="1" style="html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" value="Prefecture&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Repository&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="100" x="770" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-73" parent="1" style="html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" value="Database" vertex="1">
+          <mxGeometry height="40" width="100" x="1040" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-74" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="URLアクセス(/)">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="170" />
+            </Array>
+            <mxPoint x="80" y="170" as="sourcePoint" />
+            <mxPoint x="249.5" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-75" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" target="fDeVig6A2zsPSU2knbdz-61" value="GET / リクエスト">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="250" y="200" as="sourcePoint" />
+            <mxPoint x="410" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-76" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" target="fDeVig6A2zsPSU2knbdz-66" value="getAllPrefectures()">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="430" y="230" as="sourcePoint" />
+            <mxPoint x="549.4999999999998" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-77" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;glass=0;" value="ユーザー" vertex="1">
+          <mxGeometry height="630" width="100" x="30" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-78" parent="1" style="html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" value="ユーザー" vertex="1">
+          <mxGeometry height="40" width="100" x="30" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-79" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="findAll()">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="620" y="260" as="sourcePoint" />
+            <mxPoint x="819.4999999999998" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-80" edge="1" parent="1" source="fDeVig6A2zsPSU2knbdz-68" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="SELECT * FROM prefectures ORDER BY id">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="840" y="300" as="sourcePoint" />
+            <mxPoint x="1089.4999999999998" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-81" edge="1" parent="1" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" target="fDeVig6A2zsPSU2knbdz-68" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="970" y="350" />
+            </Array>
+            <mxPoint x="1090.75" y="350" as="sourcePoint" />
+            <mxPoint x="890" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-82" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="47件の都道府県データ" vertex="1">
+          <mxGeometry height="30" width="170" x="870" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-85" edge="1" parent="1" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="701" y="390" />
+            </Array>
+            <mxPoint x="821.75" y="390" as="sourcePoint" />
+            <mxPoint x="620" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-86" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="List&amp;lt;Prefecture&amp;gt;" vertex="1">
+          <mxGeometry height="30" width="170" x="640" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-91" edge="1" parent="1" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="501" y="490" />
+            </Array>
+            <mxPoint x="621.75" y="490" as="sourcePoint" />
+            <mxPoint x="430" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-92" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="List&amp;lt;PrefectureDto&amp;gt;" vertex="1">
+          <mxGeometry height="30" width="170" x="440" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-94" edge="1" parent="1" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="309.25" y="590" />
+            </Array>
+            <mxPoint x="430" y="590" as="sourcePoint" />
+            <mxPoint x="248.25" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-95" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="index.html + データ" vertex="1">
+          <mxGeometry height="30" width="170" x="260" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-96" edge="1" parent="1" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="119.5" y="700" />
+            </Array>
+            <mxPoint x="251.25" y="700" as="sourcePoint" />
+            <mxPoint x="78.74999999999989" y="700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-97" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="47都道府県一覧表示" vertex="1">
+          <mxGeometry height="30" width="170" x="80" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-99" edge="1" parent="1" style="curved=1;endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="640" />
+              <mxPoint x="290" y="660" />
+            </Array>
+            <mxPoint x="250" y="640" as="sourcePoint" />
+            <mxPoint x="250" y="660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-100" edge="1" parent="1" style="curved=1;endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="530" />
+              <mxPoint x="480" y="550" />
+            </Array>
+            <mxPoint x="440" y="530" as="sourcePoint" />
+            <mxPoint x="440" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-101" edge="1" parent="1" style="curved=1;endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="680" y="440" />
+              <mxPoint x="670" y="460" />
+            </Array>
+            <mxPoint x="630" y="440" as="sourcePoint" />
+            <mxPoint x="630" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-102" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="HTMLレンダリング" vertex="1">
+          <mxGeometry height="30" width="130" x="190" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-103" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Model.addAttribute(&quot;prefectures&quot;, list)" vertex="1">
+          <mxGeometry height="30" width="240" x="320" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-105" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Entity → DTO変換" vertex="1">
+          <mxGeometry height="30" width="120" x="560" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="fDeVig6A2zsPSU2knbdz-106" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;h1&gt;処理フロー：&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="30" width="170" x="10" y="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
