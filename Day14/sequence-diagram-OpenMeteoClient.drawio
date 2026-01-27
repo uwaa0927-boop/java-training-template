@@ -1,0 +1,228 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" version="29.3.4">
+  <diagram name="ページ1" id="D3bfUmB1-Km1p8EsKld7">
+    <mxGraphModel dx="1627" dy="990" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-1" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="WeatherService" vertex="1">
+          <mxGeometry height="910" width="100" x="40" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-2" parent="1" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" value="&lt;h2&gt;OpenMeteoClientの詳細：&lt;/h2&gt;" vertex="1">
+          <mxGeometry height="26" width="230" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-3" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="OpenMeteoClient" vertex="1">
+          <mxGeometry height="910" width="100" x="240" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-23" parent="JAFaCuFr3gfn0ViZK5ba-3" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="680" width="10" x="45" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="RestTemplate" vertex="1">
+          <mxGeometry height="910" width="100" x="585" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-40" parent="JAFaCuFr3gfn0ViZK5ba-4" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="420" width="10" x="45" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-5" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Open-Meteo API" vertex="1">
+          <mxGeometry height="910" width="100" x="780" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-6" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" target="JAFaCuFr3gfn0ViZK5ba-3" value="fetchWeather(lat, lon)">
+          <mxGeometry relative="1" width="80" x="-0.0044" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="90" y="170" as="sourcePoint" />
+            <mxPoint x="240" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="WeatherService" vertex="1">
+          <mxGeometry height="40" width="100" x="40" y="990" as="geometry" />
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="OpenMeteoClient" vertex="1">
+          <mxGeometry height="40" width="100" x="240" y="990" as="geometry" />
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="RestTemplate" vertex="1">
+          <mxGeometry height="40" width="100" x="585" y="990" as="geometry" />
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Open-Meteo API" vertex="1">
+          <mxGeometry height="40" width="100" x="780" y="990" as="geometry" />
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-11" edge="1" parent="1" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="290" y="960" as="sourcePoint" />
+            <mxPoint x="89.16666666666674" y="960" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="throw ExternalApiException" vertex="1">
+          <mxGeometry height="30" width="160" x="110" y="932" as="geometry" />
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-13" edge="1" parent="1" style="curved=1;endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="340" y="912" />
+              <mxPoint x="330" y="932" />
+            </Array>
+            <mxPoint x="290" y="912" as="sourcePoint" />
+            <mxPoint x="290" y="932" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="log.error()" vertex="1">
+          <mxGeometry height="30" width="120" x="230" y="882" as="geometry" />
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-16" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=80;fillColor=#e1d5e7;strokeColor=#9673a6;opacity=60;height=30;" value="alt" vertex="1">
+          <mxGeometry height="220" width="290" x="80" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-18" parent="JAFaCuFr3gfn0ViZK5ba-16" style="line;strokeWidth=1;dashed=1;labelPosition=center;verticalLabelPosition=bottom;align=left;verticalAlign=top;spacingLeft=20;spacingTop=15;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;" value="" vertex="1">
+          <mxGeometry height="65" width="290" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-19" edge="1" parent="JAFaCuFr3gfn0ViZK5ba-16" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="210.5" y="90" as="sourcePoint" />
+            <mxPoint x="9.5" y="90" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-22" parent="JAFaCuFr3gfn0ViZK5ba-16" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="【エラー】" vertex="1">
+          <mxGeometry height="30" width="60" x="120" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-20" parent="JAFaCuFr3gfn0ViZK5ba-16" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="OpenMeteoResponseDto" vertex="1">
+          <mxGeometry height="30" width="160" x="30" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-21" parent="JAFaCuFr3gfn0ViZK5ba-16" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="【正常】" vertex="1">
+          <mxGeometry height="30" width="60" x="120" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-24" edge="1" parent="1" style="curved=1;endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="340" y="210" />
+              <mxPoint x="330" y="230" />
+            </Array>
+            <mxPoint x="290" y="210" as="sourcePoint" />
+            <mxPoint x="290" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-25" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="buildUrl(lat, lon)" vertex="1">
+          <mxGeometry height="30" width="110" x="240" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-26" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="URL組み立て&lt;div&gt;タイムゾーン設定&lt;/div&gt;&lt;div&gt;パラメータ追加&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="100" x="240" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-27" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" target="JAFaCuFr3gfn0ViZK5ba-4" value="getForObject(url, OpenMetenResponseDto.class)">
+          <mxGeometry relative="1" width="80" x="-0.0044" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="290" y="320" as="sourcePoint" />
+            <mxPoint x="490" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-28" edge="1" parent="1" source="JAFaCuFr3gfn0ViZK5ba-4" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="HTTP GET Request">
+          <mxGeometry relative="1" width="80" x="-0.0044" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="690" y="349.9999999999999" as="sourcePoint" />
+            <mxPoint x="830" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-30" edge="1" parent="1" source="JAFaCuFr3gfn0ViZK5ba-41" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points" />
+            <mxPoint x="828.42" y="400" as="sourcePoint" />
+            <mxPoint x="631.5866666666667" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-31" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="200 OK + JSON" vertex="1">
+          <mxGeometry height="30" width="160" x="650" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-32" edge="1" parent="1" style="curved=1;endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="685" y="440" />
+              <mxPoint x="675" y="460" />
+            </Array>
+            <mxPoint x="635" y="440" as="sourcePoint" />
+            <mxPoint x="635" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-33" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="JSON → DTOマッピング" vertex="1">
+          <mxGeometry height="30" width="160" x="555" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-34" edge="1" parent="1" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" target="JAFaCuFr3gfn0ViZK5ba-3" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="605.8333333333333" y="490" />
+            </Array>
+            <mxPoint x="636.8333333333333" y="490" as="sourcePoint" />
+            <mxPoint x="440" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-35" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="OpenMeteoResponseDto" vertex="1">
+          <mxGeometry height="30" width="160" x="380" y="465" as="geometry" />
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-36" edge="1" parent="1" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="602.9133333333332" y="610" />
+            </Array>
+            <mxPoint x="633.9133333333332" y="610" as="sourcePoint" />
+            <mxPoint x="286.08" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-37" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="throw ResourceAccessException" vertex="1">
+          <mxGeometry height="30" width="200" x="360" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-38" edge="1" parent="1" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="602.9133333333332" y="730" />
+            </Array>
+            <mxPoint x="633.9133333333332" y="730" as="sourcePoint" />
+            <mxPoint x="286.08" y="730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-39" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="throw HttpClientErrorException" vertex="1">
+          <mxGeometry height="30" width="200" x="360" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-41" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="390" width="10" x="825" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-43" edge="1" parent="1" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="794.0033333333333" y="570" />
+            </Array>
+            <mxPoint x="825.0033333333333" y="570" as="sourcePoint" />
+            <mxPoint x="640" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-44" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Timeout" vertex="1">
+          <mxGeometry height="30" width="160" x="660" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-45" edge="1" parent="1" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="794.0033333333333" y="690" />
+              <mxPoint x="730" y="690.33" />
+            </Array>
+            <mxPoint x="825.0033333333333" y="690" as="sourcePoint" />
+            <mxPoint x="640" y="690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-46" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="400/500 Error" vertex="1">
+          <mxGeometry height="30" width="160" x="660" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-56" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=80;fillColor=#e1d5e7;strokeColor=#9673a6;opacity=60;height=30;" value="alt" vertex="1">
+          <mxGeometry height="380" width="580" x="270" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-57" parent="JAFaCuFr3gfn0ViZK5ba-56" style="line;strokeWidth=1;dashed=1;labelPosition=center;verticalLabelPosition=bottom;align=left;verticalAlign=top;spacingLeft=20;spacingTop=15;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;" value="" vertex="1">
+          <mxGeometry height="65" width="580" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-47" parent="JAFaCuFr3gfn0ViZK5ba-56" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="【成功】" vertex="1">
+          <mxGeometry height="30" width="60" x="220" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-68" parent="JAFaCuFr3gfn0ViZK5ba-56" style="line;strokeWidth=1;dashed=1;labelPosition=center;verticalLabelPosition=bottom;align=left;verticalAlign=top;spacingLeft=20;spacingTop=15;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;" value="" vertex="1">
+          <mxGeometry height="65" width="580" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-48" parent="JAFaCuFr3gfn0ViZK5ba-56" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="【タイムアウト】" vertex="1">
+          <mxGeometry height="30" width="100" x="180" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="JAFaCuFr3gfn0ViZK5ba-49" parent="JAFaCuFr3gfn0ViZK5ba-56" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="【APIエラー】" vertex="1">
+          <mxGeometry height="30" width="100" x="190" y="270" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

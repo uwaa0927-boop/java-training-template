@@ -1,0 +1,119 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" version="29.3.4">
+  <diagram name="ページ1" id="yTgcMGke5LxY3E2e45Dj">
+    <mxGraphModel dx="1084" dy="643" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="CaIhDsnBxCftG2Mrg5mo-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;h2 style=&quot;text-align: start;&quot;&gt;&lt;font color=&quot;#1f2328&quot; face=&quot;-apple-system, system-ui, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;シナリオ2：データベース保存失敗&lt;/span&gt;&lt;/font&gt;&lt;/h2&gt;" vertex="1">
+          <mxGeometry height="20" width="290" x="30" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="CaIhDsnBxCftG2Mrg5mo-2" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="WeatherService" vertex="1">
+          <mxGeometry height="490" width="100" x="80" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="CaIhDsnBxCftG2Mrg5mo-3" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="WeatherRecord&lt;div&gt;Repository&lt;/div&gt;" vertex="1">
+          <mxGeometry height="490" width="100" x="290" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="CaIhDsnBxCftG2Mrg5mo-4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Database" vertex="1">
+          <mxGeometry height="490" width="100" x="535" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="CaIhDsnBxCftG2Mrg5mo-5" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="GlobalException&lt;div&gt;Handler&lt;/div&gt;" vertex="1">
+          <mxGeometry height="490" width="100" x="730" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="CaIhDsnBxCftG2Mrg5mo-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="WeatherService" vertex="1">
+          <mxGeometry height="40" width="100" x="80" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="CaIhDsnBxCftG2Mrg5mo-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="WeatherRecord&lt;div&gt;Repository&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="100" x="290" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="CaIhDsnBxCftG2Mrg5mo-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Database" vertex="1">
+          <mxGeometry height="40" width="100" x="535" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="CaIhDsnBxCftG2Mrg5mo-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="GlobalException&lt;div&gt;Handler&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="100" x="730" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="CaIhDsnBxCftG2Mrg5mo-11" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" target="CaIhDsnBxCftG2Mrg5mo-3" value="save(weatherRecord)">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="130" y="160" as="sourcePoint" />
+            <mxPoint x="330" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CaIhDsnBxCftG2Mrg5mo-12" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" target="CaIhDsnBxCftG2Mrg5mo-4" value="INSERT INTO weather_records">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="340" y="190" as="sourcePoint" />
+            <mxPoint x="550" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CaIhDsnBxCftG2Mrg5mo-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="ディスク容量不足" vertex="1">
+          <mxGeometry height="40" width="110" x="530" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="CaIhDsnBxCftG2Mrg5mo-14" edge="1" parent="1" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" target="CaIhDsnBxCftG2Mrg5mo-3" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="576" y="290" />
+            </Array>
+            <mxPoint x="585" y="290" as="sourcePoint" />
+            <mxPoint x="425" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CaIhDsnBxCftG2Mrg5mo-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="SQLException" vertex="1">
+          <mxGeometry height="30" width="100" x="410" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="CaIhDsnBxCftG2Mrg5mo-16" edge="1" parent="1" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="327" y="340" />
+            </Array>
+            <mxPoint x="336" y="340" as="sourcePoint" />
+            <mxPoint x="130" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CaIhDsnBxCftG2Mrg5mo-17" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="DataAccessException" vertex="1">
+          <mxGeometry height="30" width="120" x="180" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="CaIhDsnBxCftG2Mrg5mo-18" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="@Transactional により&lt;div&gt;自動ロールバック&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="130" x="65" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="CaIhDsnBxCftG2Mrg5mo-19" edge="1" parent="1" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" target="CaIhDsnBxCftG2Mrg5mo-5" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="127.5" y="440" />
+            </Array>
+            <mxPoint x="136.5" y="440" as="sourcePoint" />
+            <mxPoint x="300" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CaIhDsnBxCftG2Mrg5mo-20" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="throw DataAccessException" vertex="1">
+          <mxGeometry height="30" width="190" x="370" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="CaIhDsnBxCftG2Mrg5mo-21" edge="1" parent="1" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="770.61" y="540" />
+              <mxPoint x="640" y="540" />
+            </Array>
+            <mxPoint x="779.61" y="540" as="sourcePoint" />
+            <mxPoint x="129.38888888888914" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CaIhDsnBxCftG2Mrg5mo-22" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="error/500" vertex="1">
+          <mxGeometry height="30" width="190" x="370" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="CaIhDsnBxCftG2Mrg5mo-23" edge="1" parent="1" style="curved=1;endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="830" y="490" />
+              <mxPoint x="820" y="510" />
+            </Array>
+            <mxPoint x="780" y="490" as="sourcePoint" />
+            <mxPoint x="780" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CaIhDsnBxCftG2Mrg5mo-24" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="エラーページ生成" vertex="1">
+          <mxGeometry height="30" width="100" x="730" y="460" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
