@@ -1,0 +1,298 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" version="29.3.6">
+  <diagram name="ページ1" id="4b1NHrC2iK5Cd4pxJsIj">
+    <mxGraphModel dx="2440" dy="1448" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-1" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" value="ユーザー" vertex="1">
+          <mxGeometry height="1260" width="100" x="40" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-2" parent="1" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" value="&lt;h2&gt;シナリオ：東京都の天気を表示&lt;/h2&gt;" vertex="1">
+          <mxGeometry height="26" width="250" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-3" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" value="ブラウザ" vertex="1">
+          <mxGeometry height="1260" width="100" x="190" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-4" parent="ZjWYQ19w4m_W6mdcXVAn-3" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="45" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-5" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" value="WeatherController" vertex="1">
+          <mxGeometry height="1260" width="100" x="340" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-6" parent="ZjWYQ19w4m_W6mdcXVAn-5" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="910" width="10" x="45" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-7" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" value="PrefectureService" vertex="1">
+          <mxGeometry height="1260" width="100" x="490" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-8" parent="ZjWYQ19w4m_W6mdcXVAn-7" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="70" width="10" x="45" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-9" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" value="WeatherService" vertex="1">
+          <mxGeometry height="1260" width="100" x="640" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-10" parent="ZjWYQ19w4m_W6mdcXVAn-9" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="570" width="10" x="45" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-11" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" value="OpenMeteoClient" vertex="1">
+          <mxGeometry height="1260" width="100" x="790" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-12" parent="ZjWYQ19w4m_W6mdcXVAn-11" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="130" width="10" x="45" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-13" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" value="WeatherRecord&lt;div&gt;Repository&lt;/div&gt;" vertex="1">
+          <mxGeometry height="1260" width="100" x="940" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-14" parent="ZjWYQ19w4m_W6mdcXVAn-13" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="130" width="10" x="45" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-15" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" value="Open•Meteo API" vertex="1">
+          <mxGeometry height="1260" width="100" x="1090" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-16" parent="ZjWYQ19w4m_W6mdcXVAn-15" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="80" width="10" x="45" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-17" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" value="Database" vertex="1">
+          <mxGeometry height="1260" width="100" x="1300" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-18" parent="1" style="html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" value="ユーザー" vertex="1">
+          <mxGeometry height="40" width="100" x="40" y="1360" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-19" parent="1" style="html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" value="ブラウザ" vertex="1">
+          <mxGeometry height="40" width="100" x="190" y="1360" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-20" parent="1" style="html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" value="WeatherController" vertex="1">
+          <mxGeometry height="40" width="100" x="340" y="1360" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-21" parent="1" style="html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" value="PrefectureService" vertex="1">
+          <mxGeometry height="40" width="100" x="490" y="1360" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-22" parent="1" style="html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" value="WeatherService" vertex="1">
+          <mxGeometry height="40" width="100" x="640" y="1360" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-23" parent="1" style="html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" value="OpenMeteoClient" vertex="1">
+          <mxGeometry height="40" width="100" x="790" y="1360" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-24" parent="1" style="html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" value="WeatherRecord&lt;div&gt;Repository&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="100" x="940" y="1360" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-25" parent="1" style="html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" value="Open•Meteo API" vertex="1">
+          <mxGeometry height="40" width="100" x="1090" y="1360" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-26" parent="1" style="html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" value="Database" vertex="1">
+          <mxGeometry height="40" width="100" x="1300" y="1360" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-27" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="東京都カードクリック">
+          <mxGeometry relative="1" width="80" x="-0.0044" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="90" y="170" as="sourcePoint" />
+            <mxPoint x="240" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-28" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="GET / weather / 13">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="240" y="200" as="sourcePoint" />
+            <mxPoint x="390" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-29" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="findByid(13)">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="390" y="370" as="sourcePoint" />
+            <mxPoint x="540" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-30" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="SELECT * FROM prefectures WHERE id=13">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="540" y="400" as="sourcePoint" />
+            <mxPoint x="1349.5000000000005" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-31" edge="1" parent="1" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1349.5" y="440" as="sourcePoint" />
+            <mxPoint x="539.1666666666667" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-32" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Prefecture(id=13, name=&quot;東京都&quot;, lat=35.689, lon=139.692)" vertex="1">
+          <mxGeometry height="30" width="330" x="770" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-33" edge="1" parent="1" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="240" y="1300" as="sourcePoint" />
+            <mxPoint x="90" y="1300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-34" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="天気詳細表示" vertex="1">
+          <mxGeometry height="30" width="90" x="120" y="1270" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-35" edge="1" parent="1" style="curved=1;endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="290" y="1260" />
+              <mxPoint x="280" y="1280" />
+            </Array>
+            <mxPoint x="240" y="1260" as="sourcePoint" />
+            <mxPoint x="240" y="1280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-36" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="HTMLレンダリング" vertex="1">
+          <mxGeometry height="30" width="120" x="180" y="1230" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-37" edge="1" parent="1" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="390.93000000000006" y="1220" as="sourcePoint" />
+            <mxPoint x="240.00142857142828" y="1220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-38" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="weather•detail.html" vertex="1">
+          <mxGeometry height="30" width="120" x="260" y="1187" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-39" edge="1" parent="1" style="curved=1;endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="450" y="1167" />
+              <mxPoint x="440" y="1187" />
+            </Array>
+            <mxPoint x="400" y="1167" as="sourcePoint" />
+            <mxPoint x="400" y="1187" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-40" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="model.addAttribute(&quot;weather&quot;, dto)" vertex="1">
+          <mxGeometry height="30" width="200" x="290" y="1137" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-41" edge="1" parent="1" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="687.37" y="1110" as="sourcePoint" />
+            <mxPoint x="392.62" y="1110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-42" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="WeatherDetailDto" vertex="1">
+          <mxGeometry height="30" width="100" x="490" y="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-43" parent="1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="1.都道府県情報取得" vertex="1">
+          <mxGeometry height="40" width="120" x="330" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-44" parent="1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="2.天気情報取得" vertex="1">
+          <mxGeometry height="40" width="120" x="330" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-45" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="getWeather(prefecture)">
+          <mxGeometry relative="1" width="80" x="0.0017" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="390.25" y="540" as="sourcePoint" />
+            <mxPoint x="689.75" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-46" edge="1" parent="1" style="curved=1;endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="740" y="1070" />
+              <mxPoint x="730" y="1090" />
+            </Array>
+            <mxPoint x="690" y="1070" as="sourcePoint" />
+            <mxPoint x="690" y="1090" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-47" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="toWeatherDetailDto(response)" vertex="1">
+          <mxGeometry height="30" width="120" x="640" y="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-48" parent="1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="4.DTO変換" vertex="1">
+          <mxGeometry height="40" width="120" x="630" y="990" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-49" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="fetchWeather(35.689, 139.692)">
+          <mxGeometry relative="1" width="80" x="0.0017" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="690.25" y="570" as="sourcePoint" />
+            <mxPoint x="840" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-50" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="&lt;p class=&quot;p1&quot; style=&quot;margin: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-size-adjust: none; font-language-override: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-variant-emoji: normal; font-stretch: normal; line-height: normal; font-family: &amp;quot;Helvetica Neue&amp;quot;; text-align: start; text-wrap-mode: wrap;&quot;&gt;&lt;font&gt;GET /v1/forecast?lat=35.689&amp;amp;lon=139.692&amp;amp;current=...&amp;amp;daily=...&lt;/font&gt;&lt;/p&gt;">
+          <mxGeometry relative="1" width="80" x="0.0017" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="840" y="590" as="sourcePoint" />
+            <mxPoint x="1139.5" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-51" edge="1" parent="1" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1139.75" y="670" as="sourcePoint" />
+            <mxPoint x="840.25" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-52" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;p class=&quot;p1&quot; style=&quot;margin: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-size-adjust: none; font-language-override: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-variant-emoji: normal; font-stretch: normal; font-size: 13px; line-height: normal; font-family: &amp;quot;Helvetica Neue&amp;quot;; text-align: start;&quot;&gt;OpenMeteoResponseDto (current + daily)&lt;/p&gt;" vertex="1">
+          <mxGeometry height="30" width="270" x="860" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-53" edge="1" parent="1" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="839.75" y="700" as="sourcePoint" />
+            <mxPoint x="689.0714285714284" y="700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-54" parent="1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="3.データベースに保存" vertex="1">
+          <mxGeometry height="40" width="120" x="630" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-55" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="OpenMeteoResponseDto" vertex="1">
+          <mxGeometry height="30" width="120" x="700" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-56" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="save(weatherRecord)">
+          <mxGeometry relative="1" width="80" x="0.0017" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="690.25" y="800" as="sourcePoint" />
+            <mxPoint x="989.75" y="800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-57" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="INSERT INTO weather_records(...)">
+          <mxGeometry relative="1" width="80" x="0.0017" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="990.25" y="830" as="sourcePoint" />
+            <mxPoint x="1349.5000000000005" y="830" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-58" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="INSERT INTO daily_forecasts(...)">
+          <mxGeometry relative="1" width="80" x="0.0017" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="990" y="870" as="sourcePoint" />
+            <mxPoint x="1349.75" y="870" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-59" edge="1" parent="1" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1349.5000000000005" y="930" as="sourcePoint" />
+            <mxPoint x="990" y="930" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-60" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="saved" vertex="1">
+          <mxGeometry height="30" width="120" x="1110" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-61" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="ローディング画面返却" vertex="1">
+          <mxGeometry height="30" width="130" x="250.17000000000007" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-62" edge="1" parent="1" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="390.33333333333326" y="240" as="sourcePoint" />
+            <mxPoint x="240" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-63" edge="1" parent="1" style="curved=1;endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="290" y="280" />
+              <mxPoint x="280" y="300" />
+            </Array>
+            <mxPoint x="240" y="280" as="sourcePoint" />
+            <mxPoint x="240" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-64" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="ローディング表示" vertex="1">
+          <mxGeometry height="30" width="115.5" x="182.25" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjWYQ19w4m_W6mdcXVAn-65" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="失敗時にリトライ">
+          <mxGeometry relative="1" width="80" x="0.0017" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="840.25" y="630" as="sourcePoint" />
+            <mxPoint x="1139.75" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

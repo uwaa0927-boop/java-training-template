@@ -1,0 +1,209 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" version="29.3.4">
+  <diagram name="ページ1" id="FVsfx70n126lEC6sFxbg">
+    <mxGraphModel dx="1627" dy="965" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="HjM1_02jiapYzck2a0NT-1" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;glass=0;" value="ブラウザ" vertex="1">
+          <mxGeometry height="800" width="100" x="200" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-2" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;glass=0;" value="HomeController" vertex="1">
+          <mxGeometry height="790" width="100" x="380" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-3" parent="HjM1_02jiapYzck2a0NT-2" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="460" width="10" x="45" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;glass=0;" value="PrefectureService" vertex="1">
+          <mxGeometry height="800" width="100" x="570" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-5" parent="HjM1_02jiapYzck2a0NT-4" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="330" width="10" x="45" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-6" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;glass=0;" value="Database" vertex="1">
+          <mxGeometry height="810" width="100" x="1040" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-7" parent="HjM1_02jiapYzck2a0NT-6" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="50" width="10" x="45" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-8" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;glass=0;" value="Prefecture&lt;div&gt;&lt;div&gt;Repository&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="800" width="100" x="770" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-9" parent="HjM1_02jiapYzck2a0NT-8" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="130" width="10" x="45" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-10" parent="1" style="html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" value="ブラウザ" vertex="1">
+          <mxGeometry height="40" width="100" x="200" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-11" parent="1" style="html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" value="HomeController" vertex="1">
+          <mxGeometry height="40" width="100" x="380" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-12" parent="1" style="html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" value="PrefectureService" vertex="1">
+          <mxGeometry height="40" width="100" x="570" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-13" parent="1" style="html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" value="Prefecture&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Repository&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="100" x="770" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-14" parent="1" style="html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" value="Database" vertex="1">
+          <mxGeometry height="40" width="100" x="1040" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-15" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="URLアクセス(/)">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="170" />
+            </Array>
+            <mxPoint x="80" y="170" as="sourcePoint" />
+            <mxPoint x="249.5" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-16" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" target="HjM1_02jiapYzck2a0NT-2" value="GET / リクエスト">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="250" y="200" as="sourcePoint" />
+            <mxPoint x="410" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-17" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" target="HjM1_02jiapYzck2a0NT-4" value="&lt;div&gt;【地域指定なし】&lt;/div&gt;getAllPrefectures()">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="430" y="230" as="sourcePoint" />
+            <mxPoint x="549.4999999999998" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-18" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;glass=0;" value="ユーザー" vertex="1">
+          <mxGeometry height="800" width="100" x="30" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-19" parent="1" style="html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" value="ユーザー" vertex="1">
+          <mxGeometry height="40" width="100" x="30" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-20" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="&lt;div&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;findAll()&lt;/span&gt;&lt;/div&gt;">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="620" y="430" as="sourcePoint" />
+            <mxPoint x="819.4999999999998" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-21" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="SELECT * FROM prefectures ORDER BY id">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="819.1666666666665" y="470" as="sourcePoint" />
+            <mxPoint x="1089.4999999999998" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-22" edge="1" parent="1" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="970" y="520" />
+            </Array>
+            <mxPoint x="1090.75" y="520" as="sourcePoint" />
+            <mxPoint x="819.1666666666665" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-23" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="47件の都道府県データ" vertex="1">
+          <mxGeometry height="30" width="170" x="870" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-24" edge="1" parent="1" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="701" y="560" />
+            </Array>
+            <mxPoint x="821.75" y="560" as="sourcePoint" />
+            <mxPoint x="620" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-25" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="List&amp;lt;Prefecture&amp;gt;" vertex="1">
+          <mxGeometry height="30" width="170" x="640" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-26" edge="1" parent="1" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="501" y="660" />
+            </Array>
+            <mxPoint x="621.75" y="660" as="sourcePoint" />
+            <mxPoint x="430" y="660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-27" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="List&amp;lt;PrefectureDto&amp;gt;" vertex="1">
+          <mxGeometry height="30" width="170" x="440" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-28" edge="1" parent="1" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="309.25" y="760" />
+            </Array>
+            <mxPoint x="430" y="760" as="sourcePoint" />
+            <mxPoint x="248.25" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-29" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="index.html + データ" vertex="1">
+          <mxGeometry height="30" width="170" x="260" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-30" edge="1" parent="1" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="119.5" y="870" />
+            </Array>
+            <mxPoint x="251.25" y="870" as="sourcePoint" />
+            <mxPoint x="78.74999999999989" y="870" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-31" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="47都道府県一覧表示" vertex="1">
+          <mxGeometry height="30" width="170" x="80" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-32" edge="1" parent="1" style="curved=1;endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="810" />
+              <mxPoint x="290" y="830" />
+            </Array>
+            <mxPoint x="250" y="810" as="sourcePoint" />
+            <mxPoint x="250" y="830" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-33" edge="1" parent="1" style="curved=1;endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="700" />
+              <mxPoint x="480" y="720" />
+            </Array>
+            <mxPoint x="440" y="700" as="sourcePoint" />
+            <mxPoint x="440" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-34" edge="1" parent="1" style="curved=1;endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="680" y="610" />
+              <mxPoint x="670" y="630" />
+            </Array>
+            <mxPoint x="630" y="610" as="sourcePoint" />
+            <mxPoint x="630" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-35" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="HTMLレンダリング" vertex="1">
+          <mxGeometry height="30" width="130" x="190" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-36" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Model.addAttribute(&quot;prefectures&quot;, list)" vertex="1">
+          <mxGeometry height="30" width="240" x="320" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-37" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Entity → DTO変換" vertex="1">
+          <mxGeometry height="30" width="120" x="560" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-38" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;h1&gt;処理フロー：&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="30" width="170" x="10" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-39" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;glass=0;" value="キャッシュ" vertex="1">
+          <mxGeometry height="800" width="100" x="905" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-41" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" target="HjM1_02jiapYzck2a0NT-39" value="&lt;div&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;キャッシュ確認&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;ヒット時はDatabaseへのアクセスなし&lt;/span&gt;&lt;/div&gt;">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="620" y="290" as="sourcePoint" />
+            <mxPoint x="819.4999999999998" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HjM1_02jiapYzck2a0NT-42" parent="1" style="html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" value="キャッシュ" vertex="1">
+          <mxGeometry height="40" width="100" x="905" y="900" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
