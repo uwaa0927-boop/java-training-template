@@ -1,4 +1,4 @@
-package com.example.weather_app;
+package com.example.weatherapp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
