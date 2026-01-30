@@ -3,6 +3,7 @@ package com.example.weatherapp.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Getter //Lombok(Getter/Setterを自動で作ってくれる)
@@ -25,10 +26,10 @@ public class Prefecture {
     private String nameEn;
 
     @Column(nullable = false, precision = 9, scale = 6)
-    private Double latitude;
+    private BigDecimal latitude;
 
     @Column(nullable = false, precision = 9, scale = 6)
-    private Double longitude;
+    private BigDecimal longitude;
 
     @Column(nullable = false, length = 20)
     private String region;

@@ -27,6 +27,6 @@ public class TestController {
 
     @GetMapping("/prefectures/region/{region}")
     public List<Prefecture> getByRegion(@PathVariable String region) {
-        return prefectureRepository.findByRegion(region);
+        return prefectureRepository.findByRegionOrderById(region);
     }
 }
