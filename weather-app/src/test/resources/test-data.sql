@@ -16,3 +16,6 @@ INSERT INTO prefectures (id, name, name_en, latitude, longitude, region) VALUES
         (26, '京都府', 'Kyoto', 35.021, 135.756, '関西'),
         (27, '大阪府', 'Osaka', 34.686, 135.520, '関西'),
         (47, '沖縄県', 'Okinawa', 26.212, 127.681, '沖縄');
+
+-- Reset H2 identity sequence to avoid collision
+ALTER TABLE prefectures ALTER COLUMN id RESTART WITH 100;

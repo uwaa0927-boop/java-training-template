@@ -68,7 +68,7 @@ class WeatherRecordTest {
 
         // Then
         assertThat(weatherRecord.getDailyForecasts()).hasSize(7);
-        assertThat(weatherRecord.getDailyForecasts().get(0).getTemperatureMax()).isEqualTo(15.0);
-        assertThat(weatherRecord.getDailyForecasts().get(6).getTemperatureMax()).isEqualTo(21.0);
+        assertThat(weatherRecord.getDailyForecasts().get(0).getTemperatureMax()).isEqualByComparingTo("15.0");
+        assertThat(weatherRecord.getDailyForecasts().get(6).getTemperatureMax()).isEqualByComparingTo("21.0");
     }
 }

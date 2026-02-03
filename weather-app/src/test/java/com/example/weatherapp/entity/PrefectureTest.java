@@ -33,8 +33,8 @@ class PrefectureTest {
         assertThat(prefecture.getId()).isEqualTo(13L);
         assertThat(prefecture.getName()).isEqualTo("東京都");
         assertThat(prefecture.getNameEn()).isEqualTo("Tokyo");
-        assertThat(prefecture.getLatitude()).isEqualTo(35.689487);
-        assertThat(prefecture.getLongitude()).isEqualTo(139.691706);
+        assertThat(prefecture.getLatitude()).isEqualByComparingTo("35.689");
+        assertThat(prefecture.getLongitude()).isEqualByComparingTo("139.692");
         assertThat(prefecture.getRegion()).isEqualTo("関東");
         assertThat(prefecture.getCreatedAt()).isNotNull();
         assertThat(prefecture.getUpdatedAt()).isNotNull();

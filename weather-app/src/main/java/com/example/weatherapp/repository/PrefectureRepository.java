@@ -74,7 +74,7 @@ public interface PrefectureRepository extends JpaRepository<Prefecture, Long> {
     @Query("SELECT p FROM Prefecture p " +
             "WHERE p.latitude BETWEEN :minLat AND :maxLat " +
             "AND p.longitude BETWEEN :minLon AND :maxLon " +
-            "ORDER BY p.id")
+            "ORDER BY p.region")
     List<Prefecture> findByCoordinateRange(
             @Param("minLat") Double minLat,
             @Param("maxLat") Double maxLat,
@@ -87,7 +87,7 @@ public interface PrefectureRepository extends JpaRepository<Prefecture, Long> {
      *
      * @return 地域のリスト（例: ["北海道", "東北", "関東", ...]）
      */
-    @Query("SELECT DISTINCT p.region FROM Prefecture p ORDER BY p.id")
+    @Query("SELECT DISTINCT p.region FROM Prefecture p ORDER BY p.region")
     List<String> findAllRegions();
 
     /**
