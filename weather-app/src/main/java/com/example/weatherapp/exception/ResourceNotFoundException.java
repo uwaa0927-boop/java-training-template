@@ -1,4 +1,15 @@
 package com.example.weatherapp.exception;
 
-public class ResourceNotFoundException {
+/**
+ * リソースが見つからない場合の例外
+ */
+public class ResourceNotFoundException extends RuntimeException {
+
+    public ResourceNotFoundException(String message) {
+        super(message);
+    }
+
+    public ResourceNotFoundException(String message, Throwable cause) {
+        super(message, cause);
+    }
 }
