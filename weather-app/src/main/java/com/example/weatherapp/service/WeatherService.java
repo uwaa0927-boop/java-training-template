@@ -1,4 +1,10 @@
 package com.example.weatherapp.service;
 
-public class WeatherService {
+import com.example.weatherapp.dto.WeatherDetailDto;
+
+public interface WeatherService {
+
+    WeatherDetailDto getWeatherByPrefectureId(Long prefectureId);
+
+    WeatherDetailDto getLatestWeatherFromDb(Long prefectureId);
 }
