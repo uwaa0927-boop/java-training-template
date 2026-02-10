@@ -51,8 +51,8 @@ public class WeatherServiceImpl implements WeatherService {
         log.debug("都道府県: {}", prefecture.getName());
 
         OpenMeteoResponseDto apiResponse = openMeteoClient.fetchWeather(
-                prefecture.getLatitude(),
-                prefecture.getLongitude()
+                prefecture.getLatitude().doubleValue(),
+                prefecture.getLongitude().doubleValue()
         );
 
         WeatherRecord weatherRecord = buildWeatherRecord(apiResponse, prefecture);
