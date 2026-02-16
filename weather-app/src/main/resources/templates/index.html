@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>天気予報アプリ - トップページ</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background: #4CAF50;
+            color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .filter {
+            margin-bottom: 20px;
+        }
+        .region-group {
+            margin-bottom: 30px;
+        }
+        .region-title {
+            background: #f0f0f0;
+            padding: 10px;
+            font-weight: bold;
+        }
+        .prefecture-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            padding: 10px;
+        }
+        .prefecture-card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .prefecture-card:hover {
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>全国天気予報</h1>
+    <p>47都道府県の天気をチェック</p>
+</div>
+
+<!-- 地域フィルタ（任意機能） -->
+<div class="filter" th:if="${regions}">
+    <form method="get">
+        <label>地域で絞り込み:</label>
+        <select name="region" onchange="this.form.submit()">
+            <option value="">すべて</option>
+            <option th:each="r : ${regions}"
+                    th:value="${r}"
+                    th:text="${r}"
+                    th:selected="${r == selectedRegion}"></option>
+        </select>
+    </form>
+</div>
+
+<!-- 地域別グループ表示 -->
+<div th:if="${groupedPrefectures}">
+    <div th:each="entry : ${groupedPrefectures}" class="region-group">
+        <div class="region-title" th:text="${entry.key}"></div>
+        <div class="prefecture-list">
+            <div th:each="pref : ${entry.value}" class="prefecture-card">
+                <a th:href="@{/weather/{id}(id=${pref.id})}" th:text="${pref.name}"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- フィルタ適用時の表示 -->
+<div th:if="${prefectures}">
+    <h2 th:text="${selectedRegion} + '地方'"></h2>
+    <div class="prefecture-list">
+        <div th:each="pref : ${prefectures}" class="prefecture-card">
+            <a th:href="@{/weather/{id}(id=${pref.id})}" th:text="${pref.name}"></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

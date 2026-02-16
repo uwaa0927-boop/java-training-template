@@ -18,7 +18,7 @@ import static org.assertj.core.api.Assertions.*;
  * PrefectureServiceの統合テスト
  * 実際のデータベースを使用
  */
-@SpringBootTest
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
 @Transactional
 @Sql("/test-data.sql")
 class PrefectureServiceIntegrationTest {

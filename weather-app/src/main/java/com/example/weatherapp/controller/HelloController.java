@@ -12,7 +12,7 @@ import java.time.format.DateTimeFormatter;
 @Slf4j
 public class HelloController {
 
-    @GetMapping("/")
+    @GetMapping("/hello")
     public String hello(Model model) {
         log.info("Hello endpoint accessed");
 
