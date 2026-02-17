@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title th:text="${weather.prefecture.name} + 'の天気'">天気詳細</title>
+  <style>
+    body {
+        font-family: sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .header {
+        background: #4CAF50;
+        color: white;
+        padding: 20px;
+    }
+    .current-weather {
+        border: 2px solid #ddd;
+        padding: 20px;
+        margin: 20px 0;
+    }
+    .forecast {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 10px;
+        margin: 20px 0;
+    }
+    .forecast-day {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+<div class="header">
+  <h1 th:text="${weather.prefecture.name} + 'の天気'"></h1>
+  <p th:text="'更新: ' + ${#temporals.format(weather.fetchedAt, 'yyyy/MM/dd HH:mm')}"></p>
+</div>
+
+<div class="current-weather">
+  <h2>現在の天気</h2>
+  <p>気温: <span th:text="${weather.current.temperature_2m} + '℃'"></span></p>
+  <p>天気: <span th:text="${weather.current.weatherDescription}"></span></p>
+  <p>風速: <span th:text="${weather.current.windspeed_10m} + 'm/s'"></span></p>
+  <p>湿度: <span th:text="${weather.current.relativehumidity_2m} + '%'"></span></p>
+</div>
+
+<h2>週間天気予報</h2>
+<div class="forecast">
+  <div th:each="day : ${weather.dailyForecasts}" class="forecast-day">
+    <div th:text="${#temporals.format(day.date, 'M/d')}"></div>
+    <div th:text="${day.dayOfWeek}"></div>
+    <div th:text="${day.weatherDescription}"></div>
+    <div th:text="${day.temperatureMax} + '℃ / ' + ${day.temperatureMin} + '℃'"></div>
+  </div>
+</div>
+
+<a href="/">トップページに戻る</a>
+</body>
+</html>

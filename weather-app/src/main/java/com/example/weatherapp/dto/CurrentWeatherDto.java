@@ -20,10 +20,10 @@ public class CurrentWeatherDto {
     private LocalDateTime time;
 
     /** 気温（℃） */
-    private Double temperature;
+    private Double temperature_2m;
 
     /** 天気コード */
-    private Integer weatherCode;
+    private Integer weathercode;
 
     /** 天気の説明（日本語） */
     private String weatherDescription;
@@ -32,10 +32,10 @@ public class CurrentWeatherDto {
     private String weatherIcon;
 
     /** 風速（m/s） */
-    private Double windSpeed;
+    private Double windspeed_10m;
 
     /** 湿度（%） */
-    private Integer humidity;
+    private Integer relativehumidity_2m;
 
     /** 体感温度（℃） */
     private Double apparentTemperature;

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>API Error</title>
+</head>
+<body>
+<h1>天気情報の取得に失敗しました</h1>
+<p th:text="${errorMessage}"></p>
+<p>
+  <a th:href="@{/weather/{id}(id=${prefectureId})}">再試行</a> |
+  <a href="/">トップページに戻る</a>
+</p>
+</body>
+</html>

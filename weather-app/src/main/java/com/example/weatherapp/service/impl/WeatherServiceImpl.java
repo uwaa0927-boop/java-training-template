@@ -80,15 +80,31 @@ public class WeatherServiceImpl implements WeatherService {
     ) {
         var current = apiResponse.getCurrent();
 
+        BigDecimal temperature = current.getTemperature_2m() != null
+                ? BigDecimal.valueOf(current.getTemperature_2m())
+                : null;
+
+        BigDecimal windSpeed = current.getWindspeed_10m() != null
+                ? BigDecimal.valueOf(current.getWindspeed_10m())
+                : null;
+
+        BigDecimal apparentTemperature = current.getApparentTemperature() != null
+                ? BigDecimal.valueOf(current.getApparentTemperature())
+                : null;
+
+        BigDecimal precipitation = current.getPrecipitation() != null
+                ? BigDecimal.valueOf(current.getPrecipitation())
+                : null;
+
         return WeatherRecord.builder()
                 .prefecture(prefecture)
                 .fetchedAt(LocalDateTime.now())
-                .temperature(BigDecimal.valueOf(current.getTemperature()))
-                .weatherCode(current.getWeatherCode())
-                .windSpeed(BigDecimal.valueOf(current.getWindSpeed()))
-                .humidity(current.getHumidity())
-                .apparentTemperature(BigDecimal.valueOf(current.getApparentTemperature()))
-                .precipitation(BigDecimal.valueOf(current.getPrecipitation()))
+                .temperature(temperature)
+                .weatherCode(current.getWeathercode())
+                .windSpeed(windSpeed)
+                .humidity(current.getRelativehumidity_2m())
+                .apparentTemperature(apparentTemperature)
+                .precipitation(precipitation)
                 .cloudCover(current.getCloudCover())
                 .build();
     }
@@ -101,11 +117,15 @@ public class WeatherServiceImpl implements WeatherService {
         var daily = apiResponse.getDaily();
 
         for (int i = 0; i < daily.getTime().size(); i++) {
+
+            Double tempMax = getOrNull(daily.getTemperature2mMax(), i);
+            Double tempMin = getOrNull(daily.getTemperature2mMin(), i);
+
             DailyForecast forecast = DailyForecast.builder()
                     .weatherRecord(weatherRecord)
                     .forecastDate(LocalDate.parse(daily.getTime().get(i)))
-                    .temperatureMax(BigDecimal.valueOf(daily.getTemperature2mMax().get(i)))
-                    .temperatureMin(BigDecimal.valueOf(daily.getTemperature2mMin().get(i)))
+                    .temperatureMax(tempMax != null ? BigDecimal.valueOf(tempMax) : null)
+                    .temperatureMin(tempMin != null ? BigDecimal.valueOf(tempMin) : null)
                     .weatherCode(daily.getWeathercode().get(i))
                     .precipitationSum(BigDecimal.valueOf(daily.getPrecipitationSum().get(i)))
                     .windSpeedMax(BigDecimal.valueOf(getOrNull(daily.getWindspeed10mMax(), i)))

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>404 - ページが見つかりません</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .error-code {
+            font-size: 72px;
+            color: #e74c3c;
+        }
+        .error-message {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="error-code">404</div>
+<div class="error-message" th:text="${errorMessage}">ページが見つかりません</div>
+<a href="/">トップページに戻る</a>
+</body>
+</html>
