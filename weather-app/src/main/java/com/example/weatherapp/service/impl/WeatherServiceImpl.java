@@ -6,6 +6,7 @@ import com.example.weatherapp.dto.api.OpenMeteoResponseDto;
 import com.example.weatherapp.entity.DailyForecast;
 import com.example.weatherapp.entity.Prefecture;
 import com.example.weatherapp.entity.WeatherRecord;
+import com.example.weatherapp.exception.ExternalApiException;
 import com.example.weatherapp.mapper.WeatherMapper;
 import com.example.weatherapp.repository.WeatherRecordRepository;
 import com.example.weatherapp.service.PrefectureService;

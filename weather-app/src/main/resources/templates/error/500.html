@@ -3,10 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <title>500 - サーバーエラー</title>
+  <style>
+    body {
+        font-family: sans-serif;
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        text-align: center;
+    }
+    .error-code {
+        font-size: 120px;
+        font-weight: bold;
+        color: #c0392b;
+        margin: 20px 0;
+    }
+    .error-title {
+        font-size: 32px;
+        margin: 20px 0;
+    }
+    .error-message {
+        font-size: 18px;
+        color: #666;
+        margin: 20px 0;
+    }
+    .error-details {
+        background: #f8d7da;
+        border: 1px solid #f5c6cb;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 20px 0;
+        text-align: left;
+        max-height: 300px;
+        overflow-y: auto;
+    }
+    .stack-trace {
+        font-family: monospace;
+        font-size: 12px;
+        white-space: pre-wrap;
+        word-break: break-all;
+    }
+    .actions {
+        margin: 30px 0;
+    }
+    .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        margin: 0 10px;
+        background: #3498db;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    .btn:hover {
+        background: #2980b9;
+    }
+  </style>
 </head>
 <body>
-<h1>システムエラーが発生しました</h1>
-<p th:text="${errorMessage}"></p>
-<a href="/">トップページに戻る</a>
+<div class="error-code">500</div>
+<div class="error-title">システムエラーが発生しました</div>
+
+<div class="error-message" th:text="${errorMessage}">
+  申し訳ございません。サーバーでエラーが発生しました。
+</div>
+
+<!-- 開発環境のみ表示 -->
+<div class="error-details" th:if="${errorDetail}">
+  <strong>エラー詳細:</strong><br>
+  <span th:text="${errorDetail}"></span>
+</div>
+
+<div class="error-details" th:if="${stackTrace}">
+  <strong>スタックトレース:</strong><br>
+  <div class="stack-trace" th:text="${stackTrace}"></div>
+</div>
+
+<div class="actions">
+  <a href="/" class="btn">トップページに戻る</a>
+</div>
+
+<p style="color: #999; font-size: 14px; margin-top: 40px;">
+  問題が解決しない場合は、管理者にお問い合わせください。
+</p>
 </body>
 </html>

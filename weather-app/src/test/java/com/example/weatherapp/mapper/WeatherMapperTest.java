@@ -50,8 +50,8 @@ class WeatherMapperTest {
 
         // Then
         assertThat(dto).isNotNull();
-        assertThat(dto.getTemperature()).isEqualTo(15.5);
-        assertThat(dto.getWeatherCode()).isEqualTo(1);
+        assertThat(dto.getTemperature_2m()).isEqualTo(15.5);
+        assertThat(dto.getWeathercode()).isEqualTo(1);
         assertThat(dto.getWeatherDescription()).isEqualTo("晴れ");
         assertThat(dto.getWeatherIcon()).isEqualTo("🌤️");
     }

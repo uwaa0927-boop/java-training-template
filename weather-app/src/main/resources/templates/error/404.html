@@ -6,22 +6,72 @@
     <style>
         body {
             font-family: sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
             text-align: center;
-            padding: 50px;
         }
         .error-code {
-            font-size: 72px;
+            font-size: 120px;
+            font-weight: bold;
             color: #e74c3c;
+            margin: 20px 0;
+        }
+        .error-title {
+            font-size: 32px;
+            margin: 20px 0;
         }
         .error-message {
-            font-size: 24px;
+            font-size: 18px;
+            color: #666;
             margin: 20px 0;
+        }
+        .error-details {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            font-family: monospace;
+            text-align: left;
+        }
+        .actions {
+            margin: 30px 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 0 10px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background: #2980b9;
+        }
+        .btn-secondary {
+            background: #95a5a6;
+        }
+        .btn-secondary:hover {
+            background: #7f8c8d;
         }
     </style>
 </head>
 <body>
 <div class="error-code">404</div>
-<div class="error-message" th:text="${errorMessage}">ページが見つかりません</div>
-<a href="/">トップページに戻る</a>
+<div class="error-title">ページが見つかりません</div>
+
+<div class="error-message" th:text="${errorMessage}">
+    お探しのページは見つかりませんでした
+</div>
+
+<div class="error-details" th:if="${requestUrl}">
+    <strong>リクエストURL:</strong> <span th:text="${requestUrl}"></span>
+</div>
+
+<div class="actions">
+    <a href="/" class="btn">トップページに戻る</a>
+    <a href="javascript:history.back()" class="btn btn-secondary">前のページに戻る</a>
+</div>
 </body>
 </html>

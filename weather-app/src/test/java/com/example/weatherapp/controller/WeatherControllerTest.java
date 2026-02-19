@@ -4,6 +4,7 @@ import com.example.weatherapp.dto.CurrentWeatherDto;
 import com.example.weatherapp.dto.PrefectureDto;
 import com.example.weatherapp.dto.WeatherDetailDto;
 import com.example.weatherapp.exception.ExternalApiException;
+import com.example.weatherapp.exception.GlobalExceptionHandler;
 import com.example.weatherapp.exception.ResourceNotFoundException;
 import com.example.weatherapp.service.WeatherService;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,6 +13,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.context.annotation.Import;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.time.LocalDateTime;
@@ -26,6 +28,7 @@ import static org.hamcrest.Matchers.*;
  * WeatherControllerのテスト
  */
 @WebMvcTest(WeatherController.class)
+@Import(GlobalExceptionHandler.class)
 class WeatherControllerTest {
 
     @Autowired
@@ -48,8 +51,8 @@ class WeatherControllerTest {
 
         CurrentWeatherDto current = CurrentWeatherDto.builder()
                 .time(LocalDateTime.now())
-                .temperature(15.5)
-                .weatherCode(1)
+                .temperature_2m(15.5)
+                .weathercode(1)
                 .weatherDescription("晴れ")
                 .build();
 
@@ -92,7 +95,7 @@ class WeatherControllerTest {
 
         // When & Then
         mockMvc.perform(get("/weather/999"))
-                .andExpect(status().isOk())
+                .andExpect(status().isNotFound())
                 .andExpect(view().name("error/404"))
                 .andExpect(model().attributeExists("errorMessage"))
                 .andExpect(model().attribute("errorMessage",
@@ -110,10 +113,10 @@ class WeatherControllerTest {
 
         // When & Then
         mockMvc.perform(get("/weather/13"))
-                .andExpect(status().isOk())
+                .andExpect(status().isServiceUnavailable())
                 .andExpect(view().name("error/api-error"))
                 .andExpect(model().attributeExists("errorMessage"))
-                .andExpect(model().attribute("prefectureId", 13L));
+                .andExpect(model().attribute("prefectureId", "13"));
 
         verify(weatherService, times(1)).getWeatherByPrefectureId(13L);
     }
@@ -127,7 +130,7 @@ class WeatherControllerTest {
 
         // When & Then
         mockMvc.perform(get("/weather/13"))
-                .andExpect(status().isOk())
+                .andExpect(status().isInternalServerError())
                 .andExpect(view().name("error/500"))
                 .andExpect(model().attributeExists("errorMessage"));
 
@@ -159,10 +162,8 @@ class WeatherControllerTest {
 
         // When & Then
         mockMvc.perform(get("/weather/13/latest"))
-                .andExpect(status().isOk())
-                .andExpect(view().name("error/404"))
-                .andExpect(model().attribute("errorMessage",
-                        containsString("まだ取得されていません")));
+                .andExpect(status().isNotFound())
+                .andExpect(view().name("error/404"));
 
         verify(weatherService, times(1)).getLatestWeatherFromDb(13L);
     }

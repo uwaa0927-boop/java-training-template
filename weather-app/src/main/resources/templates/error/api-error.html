@@ -2,14 +2,86 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>API Error</title>
+  <title>503 - サービス利用不可</title>
+  <style>
+    body {
+        font-family: sans-serif;
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        text-align: center;
+    }
+    .error-code {
+        font-size: 120px;
+        font-weight: bold;
+        color: #f39c12;
+        margin: 20px 0;
+    }
+    .error-icon {
+        font-size: 80px;
+        margin: 20px 0;
+    }
+    .error-title {
+        font-size: 32px;
+        margin: 20px 0;
+    }
+    .error-message {
+        font-size: 18px;
+        color: #666;
+        margin: 20px 0;
+    }
+    .error-details {
+        background: #fff3cd;
+        border: 1px solid #ffc107;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 20px 0;
+        text-align: left;
+    }
+    .actions {
+        margin: 30px 0;
+    }
+    .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        margin: 0 10px;
+        background: #3498db;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    .btn:hover {
+        background: #2980b9;
+    }
+    .btn-retry {
+        background: #27ae60;
+    }
+    .btn-retry:hover {
+        background: #229954;
+    }
+  </style>
 </head>
 <body>
-<h1>天気情報の取得に失敗しました</h1>
-<p th:text="${errorMessage}"></p>
-<p>
-  <a th:href="@{/weather/{id}(id=${prefectureId})}">再試行</a> |
-  <a href="/">トップページに戻る</a>
+<div class="error-code">503</div>
+<div class="error-icon">⚠️</div>
+<div class="error-title">天気情報の取得に失敗しました</div>
+
+<div class="error-message" th:text="${errorMessage}">
+  外部サービスに接続できませんでした
+</div>
+
+<div class="error-details" th:if="${errorDetail}">
+  <strong>エラー詳細:</strong><br>
+  <span th:text="${errorDetail}"></span>
+</div>
+
+<div class="actions">
+  <a th:href="${retryUrl}" th:if="${retryUrl}" class="btn btn-retry">再試行</a>
+  <a href="/" class="btn">トップページに戻る</a>
+</div>
+
+<p style="color: #999; font-size: 14px; margin-top: 40px;">
+  問題が続く場合は、しばらく時間をおいてから再度お試しください。
 </p>
 </body>
 </html>

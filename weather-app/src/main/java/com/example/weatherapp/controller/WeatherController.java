@@ -42,36 +42,11 @@ public class WeatherController {
     ) {
         log.info("天気詳細ページ表示: prefectureId={}", id);
 
-        try {
-            // 天気情報を取得（API呼び出し → DB保存 → DTO返却）
-            WeatherDetailDto weather = weatherService.getWeatherByPrefectureId(id);
+        WeatherDetailDto weather =
+                weatherService.getWeatherByPrefectureId(id);
 
-            // Modelに設定
-            model.addAttribute("weather", weather);
-
-            log.debug("天気情報取得成功: {}", weather.getPrefecture().getName());
-
-            return "weather-detail";
-
-        } catch (ResourceNotFoundException e) {
-            // 都道府県が存在しない
-            log.warn("都道府県が見つかりません: id={}", id);
-            model.addAttribute("errorMessage", "指定された都道府県が見つかりません");
-            return "error/404";
-
-        } catch (ExternalApiException e) {
-            // API呼び出し失敗
-            log.error("天気API呼び出し失敗: id={}", id, e);
-            model.addAttribute("errorMessage", "天気情報の取得に失敗しました");
-            model.addAttribute("prefectureId", id);
-            return "error/api-error";
-
-        } catch (Exception e) {
-            // その他の予期しないエラー
-            log.error("予期しないエラー: id={}", id, e);
-            model.addAttribute("errorMessage", "システムエラーが発生しました");
-            return "error/500";
-        }
+        model.addAttribute("weather", weather);
+        return "weather-detail";
     }
 
     /**
@@ -90,22 +65,17 @@ public class WeatherController {
     ) {
         log.info("最新天気表示（DB）: prefectureId={}", id);
 
-        try {
-            WeatherDetailDto weather = weatherService.getLatestWeatherFromDb(id);
+        WeatherDetailDto weather =
+                weatherService.getLatestWeatherFromDb(id);
 
-            if (weather == null) {
-                log.warn("天気データが存在しません: id={}", id);
-                model.addAttribute("errorMessage", "天気データがまだ取得されていません");
-                return "error/404";
-            }
-
-            model.addAttribute("weather", weather);
-            return "weather-detail";
-
-        } catch (Exception e) {
-            log.error("エラー: id={}", id, e);
-            model.addAttribute("errorMessage", "エラーが発生しました");
-            return "error/500";
+        if (weather == null) {
+            // ここは「自分で例外を投げる」
+            throw new ResourceNotFoundException(
+                    "天気データがまだ取得されていません"
+            );
         }
+
+        model.addAttribute("weather", weather);
+        return "weather-detail";
     }
 }
