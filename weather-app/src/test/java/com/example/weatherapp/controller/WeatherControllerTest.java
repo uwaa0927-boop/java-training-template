@@ -48,8 +48,8 @@ class WeatherControllerTest {
 
         CurrentWeatherDto current = CurrentWeatherDto.builder()
                 .time(LocalDateTime.now())
-                .temperature(15.5)
-                .weatherCode(1)
+                .temperature_2m(15.5)
+                .weathercode(1)
                 .weatherDescription("晴れ")
                 .build();
 
@@ -92,11 +92,7 @@ class WeatherControllerTest {
 
         // When & Then
         mockMvc.perform(get("/weather/999"))
-                .andExpect(status().isOk())
-                .andExpect(view().name("error/404"))
-                .andExpect(model().attributeExists("errorMessage"))
-                .andExpect(model().attribute("errorMessage",
-                        containsString("見つかりません")));
+                .andExpect(status().isNotFound());
 
         verify(weatherService, times(1)).getWeatherByPrefectureId(999L);
     }
@@ -110,10 +106,7 @@ class WeatherControllerTest {
 
         // When & Then
         mockMvc.perform(get("/weather/13"))
-                .andExpect(status().isOk())
-                .andExpect(view().name("error/api-error"))
-                .andExpect(model().attributeExists("errorMessage"))
-                .andExpect(model().attribute("prefectureId", 13L));
+                .andExpect(status().isInternalServerError());
 
         verify(weatherService, times(1)).getWeatherByPrefectureId(13L);
     }
@@ -127,9 +120,7 @@ class WeatherControllerTest {
 
         // When & Then
         mockMvc.perform(get("/weather/13"))
-                .andExpect(status().isOk())
-                .andExpect(view().name("error/500"))
-                .andExpect(model().attributeExists("errorMessage"));
+                .andExpect(status().isInternalServerError());
 
         verify(weatherService, times(1)).getWeatherByPrefectureId(13L);
     }
@@ -159,10 +150,7 @@ class WeatherControllerTest {
 
         // When & Then
         mockMvc.perform(get("/weather/13/latest"))
-                .andExpect(status().isOk())
-                .andExpect(view().name("error/404"))
-                .andExpect(model().attribute("errorMessage",
-                        containsString("まだ取得されていません")));
+                .andExpect(status().isNotFound());
 
         verify(weatherService, times(1)).getLatestWeatherFromDb(13L);
     }

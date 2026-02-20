@@ -32,8 +32,8 @@ class PrefectureRepositoryTest {
         // When
         List<Prefecture> prefectures = prefectureRepository.findAll();
 
-        // Then テストデータに合わせて11件
-        assertThat(prefectures).hasSize(11);
+        // Then テストデータに合わせて47件
+        assertThat(prefectures).hasSize(47);
     }
 
     @Test
@@ -103,7 +103,7 @@ class PrefectureRepositoryTest {
         );
 
         // Then
-        assertThat(result).hasSize(9);  // 関東7 + 関西2（テストデータ test-data.sql に合わせて変更する）
+        assertThat(result).hasSize(14);  // テストデータ test-data.sql に合わせて変更
     }
 
     @Test

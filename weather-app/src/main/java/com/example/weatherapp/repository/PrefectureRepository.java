@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
@@ -76,10 +77,10 @@ public interface PrefectureRepository extends JpaRepository<Prefecture, Long> {
             "AND p.longitude BETWEEN :minLon AND :maxLon " +
             "ORDER BY p.region")
     List<Prefecture> findByCoordinateRange(
-            @Param("minLat") Double minLat,
-            @Param("maxLat") Double maxLat,
-            @Param("minLon") Double minLon,
-            @Param("maxLon") Double maxLon
+            @Param("minLat") BigDecimal minLat,
+            @Param("maxLat") BigDecimal maxLat,
+            @Param("minLon") BigDecimal minLon,
+            @Param("maxLon") BigDecimal maxLon
     );
 
     /**
