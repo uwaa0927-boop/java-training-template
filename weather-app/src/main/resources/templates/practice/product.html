@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>問題5</title>
+</head>
+<body>
+    <p><a th:href="@{/}">トップページ</a></p>
+
+    <p><a th:href="@{/weather/13}">東京の天気</a></p>
+
+    <p><a th:href="@{/weather(region='関東')}">関東の天気</a></p>
+</body>
+</html>

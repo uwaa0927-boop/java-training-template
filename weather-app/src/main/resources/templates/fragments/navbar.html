@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<nav th:fragment="navbar" class="navbar">
+  <div class="container">
+    <div class="nav-brand">
+      <a th:href="@{/}">🌤️ 天気予報アプリ</a>
+    </div>
+    <ul class="nav-menu">
+      <li><a th:href="@{/}">ホーム</a></li>
+      <li><a th:href="@{/practice/thymeleaf-basic}">練習</a></li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  .navbar {
+      background: #3498db;
+      color: white;
+      padding: 15px 0;
+      margin-bottom: 20px;
+  }
+
+  .navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .nav-brand a {
+      color: white;
+      text-decoration: none;
+      font-size: 24px;
+      font-weight: bold;
+  }
+
+  .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+  }
+
+  .nav-menu a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      transition: background 0.3s;
+  }
+
+  .nav-menu a:hover {
+      background: rgba(255, 255, 255, 0.2);
+  }
+</style>
+</body>
+</html>
