@@ -19,8 +19,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 /**
  * GlobalExceptionHandlerのテスト
  */
-@WebMvcTest(WeatherController.class)
-@Import(GlobalExceptionHandler.class)
+@SpringBootTest
+@AutoConfigureMockMvc
 class GlobalExceptionHandlerTest {
 
     @Autowired

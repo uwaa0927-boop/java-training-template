@@ -1,6 +1,7 @@
 package com.example.weatherapp.controller;
 
 import com.example.weatherapp.dto.WeatherDetailDto;
+import com.example.weatherapp.dto.WeatherResponse;
 import com.example.weatherapp.exception.ExternalApiException;
 import com.example.weatherapp.exception.ResourceNotFoundException;
 import com.example.weatherapp.service.WeatherService;
@@ -30,19 +31,20 @@ public class WeatherController {
      * URL: /weather/{id}
      * 例: /weather/13 → 東京都の天気
      *
-     * @param id 都道府県ID
+     * @param prefectureId 都道府県ID
      * @param model ビューに渡すデータ
      * @return テンプレート名
      */
-    @GetMapping("/{id}")
+    @GetMapping("/{prefectureId}")
     public String showWeather(
-            @PathVariable Long id,
+            @PathVariable Long prefectureId,
             Model model
     ) {
-        log.info("天気詳細ページ表示: prefectureId={}", id);
+        log.info("天気詳細ページ表示: prefectureId={}", prefectureId);
 
         // 天気情報を取得（存在しない場合は例外が投げられる）
-        WeatherDetailDto weather = weatherService.getWeatherByPrefectureId(id);
+        WeatherDetailDto weather =
+                weatherService.getWeatherByPrefectureId(prefectureId);
 
         // Modelに設定
         model.addAttribute("weather", weather);
@@ -57,36 +59,44 @@ public class WeatherController {
      *
      * URL: /weather/{id}/latest
      *
-     * @param id 都道府県ID
+     * @param prefectureId 都道府県ID
      * @param model ビューに渡すデータ
      * @return テンプレート名
      */
-    @GetMapping("/{id}/latest")
+    @GetMapping("/{prefectureId}/latest")
     public String showLatestWeather(
-            @PathVariable Long id,
+            @PathVariable Long prefectureId,
             Model model
     ) {
         WeatherDetailDto weather =
-                weatherService.getLatestWeatherFromDb(id);
+                weatherService.getLatestWeatherFromDb(prefectureId);
 
         if (weather == null) {
-            throw new ResourceNotFoundException(
-                    "まだ天気情報が取得されていません"
-            );
+            throw new ResourceNotFoundException("まだ天気情報が取得されていません");
         }
 
         model.addAttribute("weather", weather);
         return "weather-detail";
     }
 
-    @ExceptionHandler(ResourceNotFoundException.class)
-    @ResponseStatus(HttpStatus.NOT_FOUND)
-    public String handleResourceNotFound(
-            ResourceNotFoundException e,
-            Model model
-    ) {
-        model.addAttribute("errorMessage", e.getMessage());
-        return "error/404";
-    }
+//    @ExceptionHandler(ResourceNotFoundException.class)
+//    @ResponseStatus(HttpStatus.NOT_FOUND)
+//    public String handleResourceNotFound(
+//            ResourceNotFoundException e,
+//            Model model
+//    ) {
+//        model.addAttribute("errorMessage", e.getMessage());
+//        return "error/404";
+//    }
+
+//    @ExceptionHandler(ExternalApiException.class)
+//    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+//    public String handleExternalApiError(
+//            ExternalApiException e,
+//            Model model
+//    ) {
+//        model.addAttribute("errorMessage", e.getMessage());
+//        return "error/api-error";
+//    }
 
 }

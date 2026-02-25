@@ -32,18 +32,15 @@ public class GlobalExceptionHandler {
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public String handleResourceNotFound(
             ResourceNotFoundException e,
-            Model model,
-            HttpServletRequest request
+            Model model
     ) {
         log.warn("リソースが見つかりません: path={}, message={}",
-                request.getRequestURI(),
+                // request.getRequestURI(),
                 e.getMessage()
         );
 
         model.addAttribute("errorMessage", e.getMessage());
-        model.addAttribute("requestUrl", request.getRequestURI());
         model.addAttribute("statusCode", 404);
-
         return "error/404";
     }
 
@@ -57,28 +54,25 @@ public class GlobalExceptionHandler {
      * @return エラーページ
      */
     @ExceptionHandler(ExternalApiException.class)
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    @ResponseStatus(HttpStatus.SERVICE_UNAVAILABLE)
     public String handleExternalApiError(
             ExternalApiException e,
             Model model,
             HttpServletRequest request
     ) {
+        String uri = request.getRequestURI();
+        String prefectureId = extractPrefectureId(uri);
+
         log.error("外部API呼び出しエラー: path={}, message={}",
-                request.getRequestURI(),
+                // request.getRequestURI(),
                 e.getMessage(),
                 e
         );
 
-        model.addAttribute("errorMessage", "天気情報の取得に失敗しました");
-        model.addAttribute("errorDetail", e.getMessage());
-        model.addAttribute("requestUrl", request.getRequestURI());
-
-        // リトライ用のパラメータを抽出
-        String prefectureId = extractPrefectureId(request.getRequestURI());
-        if (prefectureId != null) {
-            model.addAttribute("prefectureId", prefectureId);
-            model.addAttribute("retryUrl", "/weather/" + prefectureId);
-        }
+        model.addAttribute("errorMessage", e.getMessage());
+        model.addAttribute("statusCode", 503);
+        model.addAttribute("prefectureId", prefectureId);
+        model.addAttribute("retryUrl", uri);
 
         return "error/api-error";
     }

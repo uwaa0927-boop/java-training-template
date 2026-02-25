@@ -4,6 +4,7 @@ import com.example.weatherapp.dto.CurrentWeatherDto;
 import com.example.weatherapp.dto.PrefectureDto;
 import com.example.weatherapp.dto.WeatherDetailDto;
 import com.example.weatherapp.exception.ExternalApiException;
+import com.example.weatherapp.exception.GlobalExceptionHandler;
 import com.example.weatherapp.exception.ResourceNotFoundException;
 import com.example.weatherapp.service.WeatherService;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,6 +13,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.context.annotation.Import;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.time.LocalDateTime;
@@ -26,6 +28,7 @@ import static org.hamcrest.Matchers.*;
  * WeatherControllerのテスト
  */
 @WebMvcTest(WeatherController.class)
+@Import(GlobalExceptionHandler.class)
 class WeatherControllerTest {
 
     @Autowired
@@ -106,7 +109,7 @@ class WeatherControllerTest {
 
         // When & Then
         mockMvc.perform(get("/weather/13"))
-                .andExpect(status().isInternalServerError());
+                .andExpect(status().isServiceUnavailable());
 
         verify(weatherService, times(1)).getWeatherByPrefectureId(13L);
     }
