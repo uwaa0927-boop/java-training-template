@@ -1,5 +1,6 @@
 package com.example.weatherapp.mapper;
 
+import com.example.weatherapp.util.WeatherCodeUtil;
 import com.example.weatherapp.dto.CurrentWeatherDto;
 import com.example.weatherapp.dto.DailyForecastDto;
 import com.example.weatherapp.dto.WeatherDetailDto;
