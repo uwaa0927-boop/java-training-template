@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/header :: head('スタイルガイド')}"></head>
+<body>
+<div th:replace="~{fragments/navbar :: navbar}"></div>
+
+<div class="container">
+  <h1>スタイルガイド</h1>
+
+  <!-- カラーパレット -->
+  <section class="mb-xl">
+    <h2>カラーパレット</h2>
+    <div class="grid grid-4">
+      <div class="card">
+        <div class="card-body" style="background: var(--primary-color); color: white;">
+          Primary
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body" style="background: var(--secondary-color); color: white;">
+          Secondary
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body" style="background: var(--accent-color); color: white;">
+          Accent
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body" style="background: var(--warning-color); color: white;">
+          Warning
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ボタン -->
+  <section class="mb-xl">
+    <h2>ボタン</h2>
+    <button class="btn btn-primary">Primary</button>
+    <button class="btn btn-secondary">Secondary</button>
+    <button class="btn btn-success">Success</button>
+    <button class="btn btn-warning">Warning</button>
+    <button class="btn btn-error">Error</button>
+  </section>
+
+  <!-- カード -->
+  <section class="mb-xl">
+    <h2>カード</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="card-header">
+          <h3>カードタイトル</h3>
+        </div>
+        <div class="card-body">
+          <p>カードの本文です。</p>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-primary">詳細</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+</body>
+</html>
