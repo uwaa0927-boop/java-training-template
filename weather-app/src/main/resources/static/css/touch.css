@@ -1,0 +1,51 @@
+/* タッチデバイス最適化 */
+
+/* タップ可能な要素のサイズ */
+@media (pointer: coarse) {
+    /* ボタン */
+    .btn {
+        min-height: 44px;
+        min-width: 44px;
+        padding: var(--space-md) var(--space-lg);
+    }
+
+    /* リンク */
+    a {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    /* フォーム要素 */
+    .form-control {
+        min-height: 44px;
+        font-size: 16px; /* iOS拡大防止 */
+    }
+
+    select {
+        min-height: 44px;
+        font-size: 16px;
+    }
+}
+
+/* ホバー無効化（タッチデバイス） */
+@media (hover: none) {
+    .card:hover,
+    .prefecture-card:hover,
+    .forecast-card:hover {
+        transform: none;
+    }
+}
+
+/* スクロールスナップ */
+@media (max-width: 767px) {
+    .forecast-container {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .forecast-card {
+        scroll-snap-align: start;
+    }
+}

@@ -44,11 +44,13 @@
     margin-bottom: var(--space-xl);
 }
 
+/*
 .forecast-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     gap: var(--space-md);
 }
+*/
 
 .forecast-card {
     background: var(--bg-primary);

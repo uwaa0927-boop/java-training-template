@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/header :: head('レスポンシブテスト')}"></head>
+<body>
+<div th:replace="~{fragments/navbar :: navbar}"></div>
+
+<div class="container">
+    <h1>レスポンシブテスト</h1>
+
+    <!-- ブレークポイント表示 -->
+    <div class="mb-lg">
+        <div class="alert alert-info show-mobile">
+            📱 モバイル表示（〜767px）
+        </div>
+        <div class="alert alert-info show-tablet">
+            📱 タブレット表示（768px〜1023px）
+        </div>
+        <div class="alert alert-info show-desktop">
+            🖥️ デスクトップ表示（1024px〜）
+        </div>
+    </div>
+
+    <!-- グリッドテスト -->
+    <section class="mb-xl">
+        <h2>グリッドテスト</h2>
+        <div class="grid grid-4">
+            <div class="card"><div class="card-body">1</div></div>
+            <div class="card"><div class="card-body">2</div></div>
+            <div class="card"><div class="card-body">3</div></div>
+            <div class="card"><div class="card-body">4</div></div>
+        </div>
+    </section>
+
+    <!-- ボタンテスト -->
+    <section class="mb-xl">
+        <h2>ボタンテスト</h2>
+        <div class="action-buttons">
+            <button class="btn btn-primary">Primary</button>
+            <button class="btn btn-secondary">Secondary</button>
+            <button class="btn btn-success">Success</button>
+        </div>
+    </section>
+</div>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+
+<!-- デバッグ用：画面サイズ表示 -->
+<script>
+    function showScreenSize() {
+        const width = window.innerWidth;
+        let device = 'モバイル';
+
+        if (width >= 1024) device = 'デスクトップ';
+        else if (width >= 768) device = 'タブレット';
+
+        console.log(`画面幅: ${width}px (${device})`);
+    }
+
+    window.addEventListener('resize', showScreenSize);
+    showScreenSize();
+</script>
+</body>
+</html>
