@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/header :: head('ローディングデモ')}"></head>
+<body>
+<div th:replace="~{fragments/navbar :: navbar}"></div>
+
+<div class="container">
+    <h1>ローディング機能デモ</h1>
+
+    <!-- スピナー一覧 -->
+    <section class="mb-xl">
+        <h2>スピナー</h2>
+
+        <div class="grid grid-4">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="text-center">基本</h3>
+                    <div class="spinner" style="border-top-color: #3498db;"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="text-center">カラフル</h3>
+                    <div class="spinner-colorful"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="text-center">パルス</h3>
+                    <div class="spinner-pulse" style="background: #3498db;"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="text-center">ドット</h3>
+                    <div class="spinner-dots">
+                        <div class="dot" style="background: #3498db;"></div>
+                        <div class="dot" style="background: #e74c3c;"></div>
+                        <div class="dot" style="background: #2ecc71;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ボタンローディング -->
+    <section class="mb-xl">
+        <h2>ボタンローディング</h2>
+        <button class="btn btn-primary" onclick="simulateLoading(this)">
+            クリックしてローディング
+        </button>
+    </section>
+
+    <!-- オーバーレイ -->
+    <section class="mb-xl">
+        <h2>オーバーレイローディング</h2>
+        <button class="btn btn-primary" onclick="showOverlay()">
+            オーバーレイ表示
+        </button>
+    </section>
+
+    <!-- スケルトン -->
+    <section class="mb-xl">
+        <h2>スケルトンスクリーン</h2>
+        <div id="skeletonDemo"></div>
+        <button class="btn btn-primary" onclick="showSkeleton()">
+            スケルトン表示
+        </button>
+    </section>
+</div>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+
+<script th:src="@{/js/loading.js}"></script>
+<script>
+    function simulateLoading(btn) {
+        btn.classList.add('btn-loading');
+        btn.disabled = true;
+
+        setTimeout(() => {
+            btn.classList.remove('btn-loading');
+            btn.disabled = false;
+        }, 2000);
+    }
+
+    function showOverlay() {
+        loading.show('処理中...');
+
+        setTimeout(() => {
+            loading.updateMessage('もうすぐ完了...');
+        }, 1500);
+
+        setTimeout(() => {
+            loading.hide();
+        }, 3000);
+    }
+
+    function showSkeleton() {
+        const container = document.getElementById('skeletonDemo');
+        container.innerHTML = `
+            <div class="skeleton-card">
+                <div class="skeleton skeleton-title"></div>
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text"></div>
+            </div>
+        `;
+
+        setTimeout(() => {
+            container.innerHTML = '<p>データ読み込み完了！</p>';
+        }, 2000);
+    }
+</script>
+</body>
+</html>

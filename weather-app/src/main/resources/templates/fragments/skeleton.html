@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<!-- 都道府県カードスケルトン -->
+<div th:fragment="prefecture-skeleton" class="skeleton-card">
+    <div class="skeleton skeleton-title"></div>
+    <div class="skeleton skeleton-text"></div>
+    <div class="skeleton skeleton-text"></div>
+</div>
+
+<!-- 天気カードスケルトン -->
+<div th:fragment="weather-skeleton" class="skeleton-card">
+    <div style="display: flex; gap: 20px;">
+        <div class="skeleton" style="width: 80px; height: 80px; border-radius: 50%;"></div>
+        <div style="flex: 1;">
+            <div class="skeleton skeleton-title"></div>
+            <div class="skeleton skeleton-text"></div>
+        </div>
+    </div>
+    <div class="skeleton skeleton-text" style="margin-top: 20px;"></div>
+    <div class="skeleton skeleton-text"></div>
+    <div class="skeleton skeleton-text"></div>
+</div>
+
+<!-- 予報カードスケルトン -->
+<div th:fragment="forecast-skeleton" class="skeleton-card">
+    <div class="skeleton" style="width: 60px; height: 20px; margin: 0 auto 10px;"></div>
+    <div class="skeleton" style="width: 80px; height: 80px; margin: 0 auto 10px; border-radius: 50%;"></div>
+    <div class="skeleton skeleton-text"></div>
+</div>
+</body>
+</html>

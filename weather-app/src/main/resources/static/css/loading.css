@@ -1,0 +1,263 @@
+/* ===================================
+   ローディングコンポーネント
+   =================================== */
+
+/* オーバーレイ */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: var(--z-modal);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-base),
+                visibility var(--transition-base);
+}
+
+.loading-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* スピナーコンテナ */
+.spinner-container {
+    text-align: center;
+}
+
+/* スピナー - 基本 */
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto var(--space-md);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* スピナー - カラフル */
+.spinner-colorful {
+    width: 60px;
+    height: 60px;
+    border: 4px solid transparent;
+    border-top-color: #3498db;
+    border-right-color: #e74c3c;
+    border-bottom-color: #2ecc71;
+    border-left-color: #f39c12;
+    border-radius: 50%;
+    animation: spin 1.2s linear infinite;
+    margin: 0 auto var(--space-md);
+}
+
+/* スピナー - パルス */
+.spinner-pulse {
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    animation: pulse 1.5s ease-in-out infinite;
+    margin: 0 auto var(--space-md);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+/* スピナー - ドット */
+.spinner-dots {
+    display: flex;
+    gap: var(--space-sm);
+    justify-content: center;
+    margin: 0 auto var(--space-md);
+}
+
+.spinner-dots .dot {
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    animation: bounce 1.4s infinite ease-in-out;
+}
+
+.spinner-dots .dot:nth-child(1) {
+    animation-delay: -0.32s;
+}
+
+.spinner-dots .dot:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+@keyframes bounce {
+    0%, 80%, 100% {
+        transform: scale(0);
+        opacity: 0.5;
+    }
+    40% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ローディングテキスト */
+.loading-text {
+    color: white;
+    font-size: var(--font-lg);
+    font-weight: var(--font-medium);
+    margin-top: var(--space-md);
+}
+
+/* インラインローディング */
+.loading-inline {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.loading-inline .spinner {
+    width: 20px;
+    height: 20px;
+    border-width: 2px;
+    margin: 0;
+}
+
+/* スケルトンスクリーン */
+.skeleton {
+    background: linear-gradient(
+        90deg,
+        #f0f0f0 0%,
+        #e0e0e0 50%,
+        #f0f0f0 100%
+    );
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s ease-in-out infinite;
+    border-radius: var(--radius-md);
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* スケルトン - カード */
+.skeleton-card {
+    padding: var(--space-lg);
+    background: white;
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-md);
+}
+
+.skeleton-title {
+    height: 24px;
+    width: 60%;
+    margin-bottom: var(--space-md);
+}
+
+.skeleton-text {
+    height: 16px;
+    width: 100%;
+    margin-bottom: var(--space-sm);
+}
+
+.skeleton-text:last-child {
+    width: 80%;
+}
+
+/* プログレスバー */
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    margin-top: var(--space-md);
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: white;
+    border-radius: var(--radius-full);
+    transition: width var(--transition-slow);
+}
+
+/* インデタミネート（不定） */
+.progress-bar-indeterminate {
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar-indeterminate::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 50%;
+    height: 100%;
+    background: white;
+    animation: progress-indeterminate 1.5s linear infinite;
+}
+
+@keyframes progress-indeterminate {
+    0% {
+        left: -50%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* ボタンローディング */
+.btn-loading {
+    position: relative;
+    color: transparent;
+    pointer-events: none;
+}
+
+.btn-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+/* ミニスピナー */
+.spinner-sm {
+    width: 24px;
+    height: 24px;
+    border-width: 2px;
+}
+
+.spinner-xs {
+    width: 16px;
+    height: 16px;
+    border-width: 2px;
+}
