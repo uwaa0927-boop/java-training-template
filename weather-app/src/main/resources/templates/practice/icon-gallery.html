@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/header :: head('天気アイコンギャラリー')}"></head>
+<body>
+<div th:replace="~{fragments/navbar :: navbar}"></div>
+
+<div class="container">
+    <h1>天気アイコンギャラリー</h1>
+
+    <section class="mb-xl">
+        <h2>全アイコン</h2>
+        <div class="icon-grid">
+            <div class="icon-card">
+                <div data-weather-code="0" data-size="xl"></div>
+                <p class="icon-label">快晴 (0)</p>
+            </div>
+
+            <div class="icon-card">
+                <div data-weather-code="1" data-size="xl"></div>
+                <p class="icon-label">晴れ (1)</p>
+            </div>
+
+            <div class="icon-card">
+                <div data-weather-code="2" data-size="xl"></div>
+                <p class="icon-label">一部曇り (2)</p>
+            </div>
+
+            <div class="icon-card">
+                <div data-weather-code="3" data-size="xl"></div>
+                <p class="icon-label">曇り (3)</p>
+            </div>
+
+            <div class="icon-card">
+                <div data-weather-code="45" data-size="xl"></div>
+                <p class="icon-label">霧 (45)</p>
+            </div>
+
+            <div class="icon-card">
+                <div data-weather-code="61" data-size="xl"></div>
+                <p class="icon-label">雨 (61)</p>
+            </div>
+
+            <div class="icon-card">
+                <div data-weather-code="71" data-size="xl"></div>
+                <p class="icon-label">雪 (71)</p>
+            </div>
+
+            <div class="icon-card">
+                <div data-weather-code="80" data-size="xl"></div>
+                <p class="icon-label">にわか雨 (80)</p>
+            </div>
+
+            <div class="icon-card">
+                <div data-weather-code="95" data-size="xl"></div>
+                <p class="icon-label">雷雨 (95)</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-xl">
+        <h2>サイズバリエーション</h2>
+        <div class="size-demo">
+            <div data-weather-code="1" data-size="xs"></div>
+            <div data-weather-code="1" data-size="sm"></div>
+            <div data-weather-code="1" data-size="md"></div>
+            <div data-weather-code="1" data-size="lg"></div>
+            <div data-weather-code="1" data-size="xl"></div>
+        </div>
+    </section>
+</div>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+
+<script th:src="@{/js/weather-icons.js}"></script>
+
+<style>
+    .icon-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: var(--space-lg);
+        margin: var(--space-xl) 0;
+    }
+
+    .icon-card {
+        background: white;
+        padding: var(--space-lg);
+        border-radius: var(--radius-lg);
+        text-align: center;
+        box-shadow: var(--shadow-sm);
+    }
+
+    .icon-label {
+        margin-top: var(--space-md);
+        font-size: var(--font-sm);
+        color: var(--text-secondary);
+    }
+
+    .size-demo {
+        display: flex;
+        align-items: center;
+        gap: var(--space-lg);
+        background: white;
+        padding: var(--space-xl);
+        border-radius: var(--radius-lg);
+    }
+</style>
+</body>
+</html>
