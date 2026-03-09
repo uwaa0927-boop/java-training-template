@@ -1,0 +1,101 @@
+/* お気に入りボタン */
+.favorite-btn {
+    position: absolute;
+    top: var(--space-sm);
+    right: var(--space-sm);
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.favorite-btn:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-md);
+}
+
+.favorite-btn.active {
+    color: #f39c12;
+    background: rgba(243, 156, 18, 0.1);
+}
+
+/* お気に入りバッジ */
+.favorite-badge {
+    display: inline-block;
+    min-width: 20px;
+    padding: 2px 6px;
+    background: var(--error-color);
+    color: white;
+    font-size: var(--font-xs);
+    font-weight: var(--font-bold);
+    border-radius: var(--radius-full);
+    text-align: center;
+}
+
+/* お気に入りセクション */
+.favorites-section {
+    background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+    color: white;
+    padding: var(--space-xl);
+    border-radius: var(--radius-xl);
+    margin-bottom: var(--space-xl);
+}
+
+.favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.favorite-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    text-align: center;
+    transition: all var(--transition-base);
+    position: relative;
+}
+
+.favorite-card:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-5px);
+}
+
+.favorite-card .remove-btn {
+    position: absolute;
+    top: var(--space-xs);
+    right: var(--space-xs);
+    width: 24px;
+    height: 24px;
+    background: rgba(231, 76, 60, 0.8);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: var(--font-sm);
+    line-height: 1;
+}
+
+/* 空の状態 */
+.favorites-empty {
+    text-align: center;
+    padding: var(--space-xxl);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.favorites-empty-icon {
+    font-size: 64px;
+    margin-bottom: var(--space-md);
+}

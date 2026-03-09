@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/header :: head('お気に入り機能テスト')}">
+
+</head>
+<body>
+<div th:replace="~{fragments/navbar :: navbar}"></div>
+
+<div class="container">
+    <h1>お気に入り機能テスト</h1>
+
+    <section class="mb-xl">
+        <h2>コントロールパネル</h2>
+        <div class="grid grid-3">
+            <button class="btn btn-primary" onclick="testAdd()">追加テスト</button>
+            <button class="btn btn-secondary" onclick="testRemove()">削除テスト</button>
+            <button class="btn btn-error" onclick="testClear()">クリアテスト</button>
+        </div>
+    </section>
+
+    <section class="mb-xl">
+        <h2>現在のお気に入り</h2>
+        <pre id="favoritesDisplay" class="card card-body"></pre>
+    </section>
+
+    <section class="mb-xl">
+        <h2>エクスポート/インポート</h2>
+        <button class="btn btn-primary" onclick="exportFavorites()">エクスポート</button>
+        <button class="btn btn-secondary" onclick="importFavorites()">インポート</button>
+        <textarea id="importExport" class="form-control" rows="5"></textarea>
+    </section>
+</div>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+
+<script th:src="@{/js/favorites.js}"></script>
+<script>
+    function testAdd() {
+        favoritesManager.add(13);
+        favoritesManager.add(27);
+        favoritesManager.add(1);
+        updateDisplay();
+    }
+
+    function testRemove() {
+        favoritesManager.remove(13);
+        updateDisplay();
+    }
+
+    function testClear() {
+        favoritesManager.clear();
+        updateDisplay();
+    }
+
+    function exportFavorites() {
+        document.getElementById('importExport').value = favoritesManager.export();
+    }
+
+    function importFavorites() {
+        const json = document.getElementById('importExport').value;
+        if (favoritesManager.import(json)) {
+            alert('インポート成功');
+            updateDisplay();
+        } else {
+            alert('インポート失敗');
+        }
+    }
+
+    function updateDisplay() {
+        const display = document.getElementById('favoritesDisplay');
+        display.textContent = JSON.stringify({
+            favorites: favoritesManager.getAll(),
+            count: favoritesManager.count()
+        }, null, 2);
+    }
+
+    // 初期表示
+    updateDisplay();
+
+    // リスナー登録
+    favoritesManager.addListener(updateDisplay);
+</script>
+</body>
+</html>
