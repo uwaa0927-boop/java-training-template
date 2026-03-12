@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<body>
 <footer th:fragment="footer" class="footer">
   <div class="container">
     <p>&copy; 2024 天気予報アプリ. All rights reserved.</p>
     <p>Powered by <a href="https://open-meteo.com/" target="_blank">Open-Meteo API</a></p>
   </div>
+
+  <script th:src="@{/js/favorites.js}"></script>
+  <script th:src="@{/js/keyboard-navigation.js}"></script>
+  <script th:src="@{/js/loading.js}"></script>
+  <script th:src="@{/js/weather-icons.js}"></script>
 </footer>
 
 <style>
@@ -26,5 +28,3 @@
       text-decoration: underline;
   }
 </style>
-</body>
-</html>

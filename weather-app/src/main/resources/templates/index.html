@@ -2,123 +2,145 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="~{fragments/header :: head('全国天気予報')}"></head>
 <body>
+
+<a href="#main-content" class="skip-link">
+    メインコンテンツへスキップ
+</a>
+
 <!-- ナビゲーション -->
 <div th:replace="~{fragments/navbar :: navbar}"></div>
 
 <!-- メインコンテンツ -->
-<div class="container">
-    <!-- ヘッダーセクション -->
-    <header class="page-header">
-        <h1>🌤️ 全国天気予報</h1>
-        <p class="subtitle">47都道府県の天気情報をチェック</p>
-    </header>
+<main id="main-content">
+    <div class="container">
+        <!-- ヘッダーセクション -->
+        <header class="page-header">
+            <h1>🌤️ 全国天気予報</h1>
+            <p class="subtitle">47都道府県の天気情報をチェック</p>
+        </header>
 
-    <!-- 検索・フィルタセクション -->
-    <div class="search-filter-section">
-        <!-- 検索ボックス -->
-        <div class="search-box">
-            <input type="text"
-                   id="searchInput"
-                   placeholder="都道府県名で検索..."
-                   onkeyup="filterPrefectures()">
+        <!-- 検索・フィルタセクション -->
+        <div class="search-filter-section">
+            <!-- 検索ボックス -->
+            <div class="search-box">
+
+                <label for="searchInput" class="visually-hidden">
+                    都道府県検索
+                </label>
+
+                <input type="text"
+                       id="searchInput"
+                       placeholder="都道府県名で検索..."
+                       onkeyup="filterPrefectures()">
+            </div>
+
+            <!-- 地域フィルタ -->
+            <div class="region-filter">
+                <form method="get" action="/">
+                    <label for="regionSelect">地域で絞り込み:</label>
+                    <select name="region"
+                            id="regionSelect"
+                            onchange="this.form.submit()">
+                        <option value="">すべての地域</option>
+                        <option th:each="r : ${regions}"
+                                th:value="${r}"
+                                th:text="${r}"
+                                th:selected="${r == selectedRegion}">
+                        </option>
+                    </select>
+                </form>
+            </div>
+
+            <!-- フィルタリセット -->
+            <div class="filter-reset" th:if="${selectedRegion}">
+                <a th:href="@{/}" class="btn-reset">
+                    フィルタをクリア
+                </a>
+            </div>
         </div>
 
-        <!-- 地域フィルタ -->
-        <div class="region-filter">
-            <form method="get" action="/">
-                <label for="regionSelect">地域で絞り込み:</label>
-                <select name="region"
-                        id="regionSelect"
-                        onchange="this.form.submit()">
-                    <option value="">すべての地域</option>
-                    <option th:each="r : ${regions}"
-                            th:value="${r}"
-                            th:text="${r}"
-                            th:selected="${r == selectedRegion}">
-                    </option>
-                </select>
-            </form>
-        </div>
+        <!-- 地域別グループ表示 -->
+        <div class="prefectures-container" th:if="${groupedPrefectures}">
+            <div th:each="entry : ${groupedPrefectures}"
+                 class="region-group"
+                 th:attr="data-region=${entry.key}">
 
-        <!-- フィルタリセット -->
-        <div class="filter-reset" th:if="${selectedRegion}">
-            <a th:href="@{/}" class="btn-reset">
-                フィルタをクリア
-            </a>
-        </div>
-    </div>
+                <!-- 地域名 -->
+                <h2 class="region-title" th:text="${entry.key}"></h2>
 
-    <!-- 地域別グループ表示 -->
-    <div class="prefectures-container" th:if="${groupedPrefectures}">
-        <div th:each="entry : ${groupedPrefectures}"
-             class="region-group"
-             th:attr="data-region=${entry.key}">
+                <!-- 都道府県カード -->
+                <div class="prefecture-grid">
+                    <div th:each="pref : ${entry.value}"
+                         class="prefecture-card"
+                         th:attr="data-name=${pref.name}">
 
-            <!-- 地域名 -->
-            <h2 class="region-title" th:text="${entry.key}"></h2>
+                        <a th:href="@{/weather/{id}(id=${pref.id})}"
+                           class="card-link">
 
-            <!-- 都道府県カード -->
-            <div class="prefecture-grid">
-                <div th:each="pref : ${entry.value}"
-                     class="prefecture-card"
-                     th:attr="data-name=${pref.name}">
+                            <!-- 都道府県名 -->
+                            <h3 class="prefecture-name" th:text="${pref.name}"></h3>
 
-                    <a th:href="@{/weather/{id}(id=${pref.id})}"
-                       class="card-link">
+                            <!-- 英語名 -->
+                            <p class="prefecture-name-en" th:text="${pref.nameEn}"></p>
 
-                        <!-- 都道府県名 -->
-                        <h3 class="prefecture-name" th:text="${pref.name}"></h3>
-
-                        <!-- 英語名 -->
-                        <p class="prefecture-name-en" th:text="${pref.nameEn}"></p>
-
-                        <!-- 座標情報（デバッグ用・後で削除可） -->
-                        <div class="prefecture-info">
+                            <!-- 座標情報（デバッグ用・後で削除可） -->
+                            <div class="prefecture-info">
+                                    <span class="info-item">
+                                        緯度: <span th:text="${#numbers.formatDecimal(pref.latitude, 1, 3)}"></span>
+                                    </span>
                                 <span class="info-item">
-                                    緯度: <span th:text="${#numbers.formatDecimal(pref.latitude, 1, 3)}"></span>
-                                </span>
-                            <span class="info-item">
-                                    経度: <span th:text="${#numbers.formatDecimal(pref.longitude, 1, 3)}"></span>
-                                </span>
-                        </div>
-                    </a>
+                                        経度: <span th:text="${#numbers.formatDecimal(pref.longitude, 1, 3)}"></span>
+                                    </span>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- フィルタ結果表示（地域フィルタ適用時） -->
-    <div class="prefectures-container" th:if="${prefectures}">
-        <div class="region-group">
-            <h2 class="region-title">
-                <span th:text="${selectedRegion}"></span>地方
-                (<span th:text="${#lists.size(prefectures)}"></span>件)
-            </h2>
+        <!-- フィルタ結果表示（地域フィルタ適用時） -->
+        <div class="prefectures-container" th:if="${prefectures}">
+            <div class="region-group">
+                <h2 class="region-title">
+                    <span th:text="${selectedRegion}"></span>地方
+                    (<span th:text="${#lists.size(prefectures)}"></span>件)
+                </h2>
 
-            <div class="prefecture-grid">
-                <div th:each="pref : ${prefectures}"
-                     class="prefecture-card"
-                     th:attr="data-name=${pref.name}">
+                <div class="prefecture-grid">
+                    <div th:each="pref : ${prefectures}"
+                         class="prefecture-card"
+                         th:attr="data-name=${pref.name}">
 
-                    <a th:href="@{/weather/{id}(id=${pref.id})}"
-                       class="card-link">
-                        <h3 class="prefecture-name" th:text="${pref.name}"></h3>
-                        <p class="prefecture-name-en" th:text="${pref.nameEn}"></p>
-                    </a>
+                        <a th:href="@{/weather/{id}(id=${pref.id})}"
+                           class="card-link">
+                            <h3 class="prefecture-name" th:text="${pref.name}"></h3>
+                            <p class="prefecture-name-en" th:text="${pref.nameEn}"></p>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- データがない場合 -->
-    <div class="no-data"
-         th:if="${groupedPrefectures == null and prefectures == null}">
-        <p>データが見つかりませんでした。</p>
+        <!-- データがない場合 -->
+        <div class="no-data"
+             th:if="${groupedPrefectures == null and prefectures == null}">
+            <p>データが見つかりませんでした。</p>
+        </div>
     </div>
-</div>
+</main>
+
+
 
 <!-- フッター -->
 <div th:replace="~{fragments/footer :: footer}"></div>
+
+<!-- スクリーンリーダー用通知領域 -->
+<div id="aria-announcer"
+     class="visually-hidden"
+     role="status"
+     aria-live="polite"
+     aria-atomic="true">
+</div>
 
 <!-- JavaScript -->
 <script>
@@ -369,57 +391,7 @@
     }
 </style>
 
-<!-- ローディング表示 -->
-<div id="loading" style="display: none;">
-    <div class="loading-overlay">
-        <div class="spinner"></div>
-        <p>読み込み中...</p>
-    </div>
-</div>
+<script th:src="@{/js/loading.js}"></script>
 
-<style>
-    .loading-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.7);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        z-index: 9999;
-        color: white;
-    }
-
-    .spinner {
-        border: 4px solid rgba(255, 255, 255, 0.3);
-        border-top: 4px solid white;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        animation: spin 1s linear infinite;
-    }
-
-    @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-    }
-</style>
-
-<script>
-    // リンククリック時にローディング表示
-    document.addEventListener('DOMContentLoaded', function() {
-        const links = document.querySelectorAll('.card-link');
-        const loading = document.getElementById('loading');
-
-        links.forEach(link => {
-            link.addEventListener('click', function() {
-                loading.style.display = 'block';
-            });
-        });
-    });
-</script>
 </body>
 </html>

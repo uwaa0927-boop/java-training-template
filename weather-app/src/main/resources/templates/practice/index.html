@@ -1,54 +1,95 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>練習ページ</title>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/header :: head('全国天気予報')}">
 
-    <link rel="stylesheet" href="/css/favorites.css">
+    <link rel="stylesheet" href="/css/accessibility.css">
+
 </head>
 <body>
-<h1 th:text="${message}"></h1>
+<!-- スキップリンク -->
+<a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
 
-<h2>アノテーション練習リンク</h2>
-<ul>
-    <li><a href="/practice/param?name=Taro&age=25">@RequestParam練習</a></li>
-    <li><a href="/practice/user/123">@PathVariable練習</a></li>
-    <li><a href="/practice/article/tech/456">複数PathVariable練習</a></li>
-    <li><a href="/practice/json">JSON返却練習</a></li>
-</ul>
+<!-- ナビゲーション -->
+<nav aria-label="メインナビゲーション" th:replace="~{fragments/navbar :: navbar}"></nav>
 
-<!-- お気に入りセクション -->
-<section class="favorites-section" id="favoritesSection" style="display: none;">
-    <div class="favorites-header">
-        <h2>
-            ⭐ お気に入り
-            <span class="favorite-badge" id="favoriteBadge">0</span>
-        </h2>
-        <button class="btn btn-sm" onclick="clearAllFavorites()">
-            すべてクリア
-        </button>
+<!-- メインコンテンツ -->
+<main id="main-content" role="main">
+    <div class="container">
+        <!-- ページヘッダー -->
+        <header>
+            <h1>テスト123</h1>
+            <p>47都道府県の天気情報をチェック</p>
+        </header>
+
+        <!-- 検索セクション -->
+        <section aria-label="検索とフィルタ">
+            <h2 class="visually-hidden">都道府県の検索</h2>
+
+            <form role="search" aria-label="都道府県検索">
+                <label for="searchInput" class="visually-hidden">都道府県名で検索</label>
+                <input type="search"
+                       id="searchInput"
+                       name="search"
+                       placeholder="都道府県名で検索..."
+                       aria-describedby="searchHelp">
+                <span id="searchHelp" class="visually-hidden">
+                        都道府県名を入力してEnterキーを押すと検索できます
+                    </span>
+            </form>
+
+            <div class="region-filter">
+                <label for="regionSelect">地域で絞り込み:</label>
+                <select id="regionSelect"
+                        name="region"
+                        aria-label="地域選択">
+                    <option value="">すべての地域</option>
+                    <option th:each="r : ${regions}"
+                            th:value="${r}"
+                            th:text="${r}">
+                    </option>
+                </select>
+            </div>
+        </section>
+
+        <!-- 都道府県リスト -->
+        <section aria-label="都道府県一覧">
+            <h2>都道府県リスト</h2>
+
+            <div th:each="entry : ${groupedPrefectures}">
+                <h3 th:text="${entry.key}">北海道</h3>
+
+                <ul role="list" class="prefecture-grid">
+                    <li th:each="pref : ${entry.value}">
+                        <article class="prefecture-card">
+                            <button class="favorite-btn"
+                                    th:attr="data-prefecture-id=${pref.id},
+                                                aria-label='${pref.name}をお気に入りに追加',
+                                                aria-pressed='false'">
+                                <span aria-hidden="true">☆</span>
+                            </button>
+
+                            <a th:href="@{/weather/{id}(id=${pref.id})}"
+                               th:attr="aria-label='${pref.name}の天気を見る'">
+                                <h4 th:text="${pref.name}">東京都</h4>
+                                <p class="prefecture-name-en"
+                                   th:text="${pref.nameEn}"
+                                   aria-label="英語名">Tokyo</p>
+                            </a>
+                        </article>
+                    </li>
+                </ul>
+            </div>
+        </section>
     </div>
+</main>
 
-    <div class="favorites-grid" id="favoritesGrid">
-        <!-- JavaScriptで動的生成 -->
-    </div>
+<!-- フッター -->
+<footer th:replace="~{fragments/footer :: footer}"></footer>
 
-    <div class="favorites-empty" id="favoritesEmpty">
-        <div class="favorites-empty-icon">⭐</div>
-        <p>お気に入りの都道府県を追加してください</p>
-    </div>
-</section>
+<script src="/js/keyboard-navigation.js?v=1"></script>
 
-<!-- 都道府県カードにお気に入りボタン追加 -->
-<div class="prefecture-card" style="position: relative;">
-    <button class="favorite-btn"
-            data-prefecture-id="${pref.id}"
-            onclick="event.stopPropagation();">
-        ☆
-    </button>
-    <a th:href="@{/weather/{id}(id=${pref.id})}">
-        <h3 class="prefecture-name" th:text="${pref.name}">東京都</h3>
-    </a>
-</div>
+<script>
+    console.log("INLINE SCRIPT TEST");
+</script>
 </body>
 </html>

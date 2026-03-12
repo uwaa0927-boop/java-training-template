@@ -2,28 +2,25 @@
    ローディングコンポーネント
    =================================== */
 
-/* オーバーレイ */
 .loading-overlay {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
-    display: flex;
+
+    display: none;
+
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    background: rgba(0, 0, 0, 0.7);
     z-index: var(--z-modal);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity var(--transition-base),
-                visibility var(--transition-base);
 }
 
 .loading-overlay.show {
-    opacity: 1;
-    visibility: visible;
+    display: flex;
 }
 
 /* スピナーコンテナ */

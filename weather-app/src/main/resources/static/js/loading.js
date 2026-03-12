@@ -66,7 +66,11 @@ class LoadingManager {
 }
 
 // グローバルインスタンス
-const loading = new LoadingManager();
+let loading;
+
+document.addEventListener("DOMContentLoaded", function () {
+    loading = new LoadingManager();
+});
 
 /**
  * ページ読み込み時のローディング
@@ -74,7 +78,8 @@ const loading = new LoadingManager();
 document.addEventListener('DOMContentLoaded', function() {
 
     // すべてのリンクにローディング追加
-    const weatherLinks = document.querySelectorAll('a[href^="/weather/"]');
+    //const weatherLinks = document.querySelectorAll('a[href^="/weather/"]');
+    const weatherLinks = document.querySelectorAll('.card-link');
     weatherLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             loading.show('天気情報を取得中...');
@@ -171,4 +176,25 @@ document.addEventListener('DOMContentLoaded', function() {
             img.src = img.dataset.src;
         });
     }
+});
+
+/**
+ * ローディングのARIA通知
+ */
+function showLoadingWithAria(message = '読み込み中') {
+    loading.show(message);
+
+    // aria-live領域に通知
+    announceToScreenReader(message);
+}
+
+function announceToScreenReader(message) {
+    const announcer = document.getElementById('aria-announcer');
+    if (announcer) {
+        announcer.textContent = message;
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    loading.hide();
 });

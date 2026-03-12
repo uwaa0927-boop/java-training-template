@@ -219,6 +219,27 @@ function updateFavoriteCount() {
 }
 
 /**
+ * お気に入りボタンのARIA更新
+ */
+function updateFavoriteButtonAria(prefectureId, button, prefectureName) {
+    const isFav = favoritesManager.isFavorite(prefectureId);
+
+    // aria-pressed更新
+    button.setAttribute('aria-pressed', isFav);
+
+    // aria-label更新
+    const label = isFav
+        ? `${prefectureName}をお気に入りから削除`
+        : `${prefectureName}をお気に入りに追加`;
+    button.setAttribute('aria-label', label);
+
+    // 視覚的表示
+    button.innerHTML = isFav
+        ? '<span aria-hidden="true">★</span>'
+        : '<span aria-hidden="true">☆</span>';
+}
+
+/**
  * DOMContentLoaded時の初期化
  */
 document.addEventListener('DOMContentLoaded', function() {
@@ -246,6 +267,10 @@ function renderFavorites() {
     const favoritesSection = document.getElementById('favoritesSection');
     const favoritesGrid = document.getElementById('favoritesGrid');
     const favoritesEmpty = document.getElementById('favoritesEmpty');
+
+    if (!favoritesSection || !favoritesGrid || !favoritesEmpty) {
+            return;
+        }
 
     const favorites = favoritesManager.getAll();
 
