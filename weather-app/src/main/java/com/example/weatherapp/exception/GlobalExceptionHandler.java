@@ -34,8 +34,7 @@ public class GlobalExceptionHandler {
             ResourceNotFoundException e,
             Model model
     ) {
-        log.warn("リソースが見つかりません: path={}, message={}",
-                // request.getRequestURI(),
+        log.warn("リソースが見つかりません: message={}",
                 e.getMessage()
         );
 

@@ -6,6 +6,7 @@ import com.example.weatherapp.dto.api.OpenMeteoResponseDto;
 import com.example.weatherapp.entity.DailyForecast;
 import com.example.weatherapp.entity.Prefecture;
 import com.example.weatherapp.entity.WeatherRecord;
+import com.example.weatherapp.exception.ResourceNotFoundException;
 import com.example.weatherapp.mapper.WeatherMapper;
 import com.example.weatherapp.repository.WeatherRecordRepository;
 import com.example.weatherapp.service.PrefectureService;
@@ -48,6 +49,11 @@ public class WeatherServiceImpl implements WeatherService {
         log.info("天気情報取得開始: prefectureId={}", prefectureId);
 
         Prefecture prefecture = prefectureService.findEntityById(prefectureId);
+
+        if (prefecture == null) {
+            throw new ResourceNotFoundException("都道府県が見つかりません: id=" + prefectureId);
+        }
+
         log.debug("都道府県: {}", prefecture.getName());
 
         OpenMeteoResponseDto apiResponse = openMeteoClient.fetchWeather(
@@ -115,6 +121,10 @@ public class WeatherServiceImpl implements WeatherService {
     ) {
         List<DailyForecast> forecasts = new ArrayList<>();
         var daily = apiResponse.getDaily();
+
+        if (daily == null || daily.getTime() == null) {
+            return forecasts;
+        }
 
         for (int i = 0; i < daily.getTime().size(); i++) {
 

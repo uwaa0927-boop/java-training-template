@@ -127,4 +127,17 @@ class HomeControllerTest {
                 .andExpect(model().attribute("status", "OK"))
                 .andExpect(model().attribute("message", "Application is running"));
     }
+
+    @Test
+    @DisplayName("XSS対策確認")
+    void testXssPrevention() throws Exception {
+
+        String maliciousScript = "<script>alert('XSS')</script>";
+
+        mockMvc.perform(get("/")
+                        .param("region", maliciousScript))
+                .andExpect(status().isOk())
+                .andExpect(content().string(containsString("&lt;script&gt;")))
+                .andExpect(content().string(not(containsString(maliciousScript))));
+    }
 }
