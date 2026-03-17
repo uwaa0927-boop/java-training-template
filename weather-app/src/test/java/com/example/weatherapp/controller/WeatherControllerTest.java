@@ -157,4 +157,20 @@ class WeatherControllerTest {
 
         verify(weatherService, times(1)).getLatestWeatherFromDb(13L);
     }
+
+    @Test
+    void home_shouldReturnOk() throws Exception {
+        mockMvc.perform(get("/"))
+                .andExpect(status().isOk());
+    }
+
+    @Test
+    @DisplayName("存在しないIDのlatestアクセスで404")
+    void latestWeather_NotFound() throws Exception {
+        when(weatherService.getLatestWeatherFromDb(999L))
+                .thenReturn(null);
+
+        mockMvc.perform(get("/weather/999/latest"))
+                .andExpect(status().isNotFound());
+    }
 }
