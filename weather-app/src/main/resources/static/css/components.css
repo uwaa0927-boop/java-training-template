@@ -271,3 +271,12 @@
 .p-md { padding: var(--space-md); }
 .p-lg { padding: var(--space-lg); }
 .p-xl { padding: var(--space-xl); }
+
+/* CSSスプライト */
+.icon {
+    background-image: url('/images/sprites.png');
+    background-repeat: no-repeat;
+}
+
+.icon-sun { background-position: 0 0; }
+.icon-cloud { background-position: -32px 0; }

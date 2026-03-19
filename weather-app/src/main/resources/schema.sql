@@ -59,3 +59,15 @@ CREATE TABLE daily_forecasts (
                                  INDEX idx_record (weather_record_id),
                                  INDEX idx_date (forecast_date)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='日次予報';
+
+-- 都道府県検索用
+CREATE INDEX idx_prefecture_name ON prefectures(name);
+CREATE INDEX idx_prefecture_region ON prefectures(region);
+
+-- 天気記録検索用
+CREATE INDEX idx_weather_prefecture_id ON weather_records(prefecture_id);
+CREATE INDEX idx_weather_fetched_at ON weather_records(fetched_at DESC);
+
+-- 複合インデックス
+CREATE INDEX idx_weather_pref_fetched
+    ON weather_records(prefecture_id, fetched_at DESC);

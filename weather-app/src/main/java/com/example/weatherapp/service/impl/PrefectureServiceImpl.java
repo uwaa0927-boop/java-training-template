@@ -9,6 +9,8 @@ import com.example.weatherapp.service.PrefectureService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.CacheEvict;
 
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -43,14 +45,14 @@ public class PrefectureServiceImpl implements PrefectureService {
      * @return 全都道府県のDTOリスト
      */
     @Override
+    @Cacheable(value = "prefectures")
+    @Transactional(readOnly = true)
     public List<PrefectureDto> findAll() {
-        log.info("全都道府県を取得");
-
+        // 一括取得でクエリ数削減
         List<Prefecture> prefectures = prefectureRepository.findAll();
-
-        log.debug("取得件数: {}", prefectures.size());
-
-        return prefectureMapper.toDtoList(prefectures);
+        return prefectures.stream()
+                .map(prefectureMapper::toDto)
+                .collect(Collectors.toList());
     }
 
     /**
@@ -61,6 +63,7 @@ public class PrefectureServiceImpl implements PrefectureService {
      * @throws ResourceNotFoundException 存在しない場合
      */
     @Override
+    @Cacheable(value = "prefectures", key = "#id")
     public PrefectureDto findById(Long id) {
         log.info("都道府県を取得: id={}", id);
 
@@ -153,5 +156,10 @@ public class PrefectureServiceImpl implements PrefectureService {
                 ));
 
         return prefectureMapper.toDto(prefecture);
+    }
+
+    @CacheEvict(value = "prefectures", allEntries = true)
+    public void clearCache() {
+        // キャッシュクリア
     }
 }

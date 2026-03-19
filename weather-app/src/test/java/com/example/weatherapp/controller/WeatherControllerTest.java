@@ -23,6 +23,7 @@ import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 import static org.hamcrest.Matchers.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * WeatherControllerのテスト
@@ -172,5 +173,20 @@ class WeatherControllerTest {
 
         mockMvc.perform(get("/weather/999/latest"))
                 .andExpect(status().isNotFound());
+    }
+
+    @Test
+    @DisplayName("API応答時間計測")
+    void testApiResponseTime() throws Exception {
+        long startTime = System.currentTimeMillis();
+
+        mockMvc.perform(get("/weather/13"))
+                .andExpect(status().isOk());
+
+        long endTime = System.currentTimeMillis();
+        long responseTime = endTime - startTime;
+
+        System.out.println("応答時間: " + responseTime + "ms");
+        assertThat(responseTime).isLessThan(200);
     }
 }

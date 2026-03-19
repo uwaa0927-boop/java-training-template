@@ -351,3 +351,21 @@ favoritesManager.addListener(renderFavorites);
 document.addEventListener('DOMContentLoaded', function() {
     renderFavorites();
 });
+
+// デバウンス実装
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// 検索にデバウンス適用
+const searchInput = document.getElementById('searchInput');
+const debouncedSearch = debounce(filterPrefectures, 300);
+searchInput.addEventListener('input', debouncedSearch);

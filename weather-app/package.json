@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "css:minify": "cleancss -o static/css/all.min.css static/css/*.css",
+    "js:minify": "uglifyjs static/js/*.js -o static/js/all.min.js"
+  }
+}

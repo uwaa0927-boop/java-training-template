@@ -1,5 +1,6 @@
 package com.example.weatherapp.repository;
 
+import com.example.weatherapp.dto.WeatherSummaryDto;
 import com.example.weatherapp.entity.Prefecture;
 import com.example.weatherapp.entity.WeatherRecord;
 import org.springframework.data.domain.Page;
@@ -127,4 +128,20 @@ public interface WeatherRecordRepository extends JpaRepository<WeatherRecord, Lo
      * @return 記録件数
      */
     long countByPrefecture(Prefecture prefecture);
+
+    // ページネーション対応
+    @Query("SELECT w FROM WeatherRecord w " +
+            "WHERE w.prefecture.id = :prefectureId " +
+            "ORDER BY w.fetchedAt DESC")
+    Page<WeatherRecord> findByPrefectureIdOrderByFetchedAtDesc(
+            @Param("prefectureId") Long prefectureId,
+            Pageable pageable
+    );
+
+    // 必要なカラムのみ取得
+    @Query("SELECT new com.example.weatherapp.dto.WeatherSummaryDto(" +
+            "w.id, w.prefecture.name, w.temperature, w.fetchedAt) " +
+            "FROM WeatherRecord w " +
+            "WHERE w.prefecture.region = :region")
+    List<WeatherSummaryDto> findSummaryByRegion(@Param("region") String region);
 }

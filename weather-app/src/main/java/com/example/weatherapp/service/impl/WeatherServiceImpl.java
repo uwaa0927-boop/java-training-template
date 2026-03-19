@@ -14,6 +14,7 @@ import com.example.weatherapp.service.WeatherService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.cache.annotation.Cacheable;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -45,6 +46,11 @@ public class WeatherServiceImpl implements WeatherService {
     }
 
     @Override
+    @Cacheable(
+            value = "weather",
+            key = "#prefectureId",
+            unless = "#result == null"
+    )
     public WeatherDetailDto getWeatherByPrefectureId(Long prefectureId) {
         log.info("天気情報取得開始: prefectureId={}", prefectureId);
 
