@@ -299,7 +299,7 @@ function renderFavorites() {
         card.className = 'favorite-card';
         card.innerHTML = `
             <button class="remove-btn" onclick="removeFavorite(${id})" title="削除">×</button>
-            <a href="/weather/${id}" style="color: white; text-decoration: none;">
+            <a href="/weather/${id}">
                 <div class="favorite-card-content">
                     <h3>${prefName}</h3>
                 </div>

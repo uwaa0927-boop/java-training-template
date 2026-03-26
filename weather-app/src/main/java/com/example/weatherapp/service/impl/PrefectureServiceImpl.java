@@ -48,11 +48,8 @@ public class PrefectureServiceImpl implements PrefectureService {
     @Cacheable(value = "prefectures")
     @Transactional(readOnly = true)
     public List<PrefectureDto> findAll() {
-        // 一括取得でクエリ数削減
         List<Prefecture> prefectures = prefectureRepository.findAll();
-        return prefectures.stream()
-                .map(prefectureMapper::toDto)
-                .collect(Collectors.toList());
+        return prefectureMapper.toDtoList(prefectures);
     }
 
     /**

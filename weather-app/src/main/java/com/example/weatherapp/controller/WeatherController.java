@@ -51,6 +51,8 @@ public class WeatherController {
 
         log.debug("天気情報取得成功: {}", weather.getPrefecture().getName());
 
+        log.info("★★★ weather中身: {}", weather);
+
         return "weather-detail";
     }
 

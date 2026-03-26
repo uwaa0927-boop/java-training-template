@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{fragments/header :: head('全国天気予報')}"></head>
+<head th:replace="~{fragments/header :: head('全国天気予報')}">
+
+    <link rel="stylesheet" th:href="@{/css/favorites.css}">
+
+</head>
 <body>
 
 <a href="#main-content" class="skip-link">
@@ -13,6 +17,28 @@
 <!-- メインコンテンツ -->
 <main id="main-content">
     <div class="container">
+
+        <section class="favorites-section" id="favoritesSection" style="display: none;">
+            <div class="favorites-header">
+                <h2>
+                    ⭐ お気に入り
+                    <span class="favorite-badge" id="favoriteBadge">0</span>
+                </h2>
+                <button class="btn btn-sm" onclick="clearAllFavorites()">
+                    すべてクリア
+                </button>
+            </div>
+
+            <div class="favorites-grid" id="favoritesGrid">
+                <!-- JavaScriptで動的生成 -->
+            </div>
+
+            <div class="favorites-empty" id="favoritesEmpty">
+                <div class="favorites-empty-icon">⭐</div>
+                <p>お気に入りの都道府県を追加してください</p>
+            </div>
+        </section>
+
         <!-- ヘッダーセクション -->
         <header class="page-header">
             <h1>🌤️ 全国天気予報</h1>
@@ -30,7 +56,8 @@
 
                 <input type="text"
                        id="searchInput"
-                       placeholder="都道府県名で検索...">
+                       placeholder="都道府県名で検索..."
+                       onkeyup="filterPrefectures()">
             </div>
 
             <!-- 地域フィルタ -->
@@ -71,7 +98,15 @@
                 <div class="prefecture-grid">
                     <div th:each="pref : ${entry.value}"
                          class="prefecture-card"
-                         th:attr="data-name=${pref.name}">
+                         th:attr="data-name=${pref.name}"
+                         style="position: relative;">
+
+                        <button
+                                class="favorite-btn"
+                                th:attr="data-prefecture-id=${pref.id}"
+                                onclick="event.stopPropagation();">
+                            ☆
+                        </button>
 
                         <a th:href="@{/weather/{id}(id=${pref.id})}"
                            class="card-link">

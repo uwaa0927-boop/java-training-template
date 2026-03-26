@@ -1,5 +1,6 @@
 package com.example.weatherapp.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -38,11 +39,13 @@ public class CurrentWeatherDto {
     private Integer relativehumidity_2m;
 
     /** 体感温度（℃） */
+    @JsonProperty("apparent_temperature")
     private Double apparentTemperature;
 
     /** 降水量（mm） */
     private Double precipitation;
 
     /** 雲量（%） */
+    @JsonProperty("cloudcover")
     private Integer cloudCover;
 }

@@ -137,14 +137,17 @@ public class WeatherServiceImpl implements WeatherService {
             Double tempMax = getOrNull(daily.getTemperature2mMax(), i);
             Double tempMin = getOrNull(daily.getTemperature2mMin(), i);
 
+            Double precipitationSum = getOrNull(daily.getPrecipitationSum(), i);
+            Double windSpeedMax = getOrNull(daily.getWindspeed10mMax(), i);
+
             DailyForecast forecast = DailyForecast.builder()
                     .weatherRecord(weatherRecord)
                     .forecastDate(LocalDate.parse(daily.getTime().get(i)))
                     .temperatureMax(tempMax != null ? BigDecimal.valueOf(tempMax) : null)
                     .temperatureMin(tempMin != null ? BigDecimal.valueOf(tempMin) : null)
                     .weatherCode(daily.getWeathercode().get(i))
-                    .precipitationSum(BigDecimal.valueOf(daily.getPrecipitationSum().get(i)))
-                    .windSpeedMax(BigDecimal.valueOf(getOrNull(daily.getWindspeed10mMax(), i)))
+                    .precipitationSum(precipitationSum != null ? BigDecimal.valueOf(precipitationSum) : null)
+                    .windSpeedMax(windSpeedMax != null ? BigDecimal.valueOf(windSpeedMax) : null)
                     .sunrise(parseTime(daily.getSunrise(), i))
                     .sunset(parseTime(daily.getSunset(), i))
                     .build();

@@ -106,6 +106,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const iconPlaceholders = document.querySelectorAll('[data-weather-code]');
 
     iconPlaceholders.forEach(placeholder => {
+        if (placeholder.innerHTML.trim() !== '') return;
+
         const code = placeholder.getAttribute('data-weather-code');
         const size = placeholder.getAttribute('data-size') || 'md';
         const icon = createWeatherIcon(code, size);

@@ -65,7 +65,7 @@ public class OpenMeteoClient {
                 .queryParam("longitude", longitude)
                 .queryParam("current",
                         "temperature_2m,weathercode,windspeed_10m,relativehumidity_2m," +
-                                "apparent_temperature,precipitation,cloud_cover"
+                                "apparent_temperature,precipitation,cloudcover"
                 )
                 .queryParam("daily",
                         "temperature_2m_max,temperature_2m_min,weathercode," +
